@@ -1,0 +1,146 @@
+.App {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  height: 100vh;
+}
+
+.App-header {
+  background-color: #353057;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 16px;
+  height: 50px; /* Adjusted height */
+  padding: 0; /* Removed padding to allow flexbox to center content */
+}
+
+
+.App-content {
+  display: flex;
+  padding: 40px;
+  padding-left: 80px;
+  padding-right: 80px;
+  gap: 50px;
+}
+
+.chatbot-container {
+  background-color: #353057;
+  color: white;
+  flex-basis: 400px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: auto; /* adjusted for content */
+}
+
+.chat-messages {
+  overflow-y: auto;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.chat-message {
+  background-color: #f1f1f1;
+  color: #333;
+  padding: 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  word-break: break-word;
+}
+
+.chat-message.user {
+  background-color: #4caf50;
+}
+
+.chat-input-container {
+  display: flex;
+}
+
+.chat-input {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.chat-send-button {
+  padding: 10px;
+  background-color: #F9C12C;
+  color: #333;
+  border: none;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.suggestions-section {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.suggestions-container,
+.visited-container {
+  background-color: #D1CDFF;
+  padding: 30px;
+  border-radius: 10px;
+  position: relative;
+  margin-bottom: 10px;
+  flex-grow: 1;
+}
+
+.section-title {
+  margin-top: 0;
+  color: #333;
+  font-size: 25px; /* Adjust font size as needed */
+  margin-bottom: 10px; /* Space between the title and the content below it */
+}
+
+.suggestions, .visited {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  gap: 20px;
+  column-gap: 90px;
+}
+
+.restaurant-card img {
+  width: 100%;
+  object-fit: cover; /* This will crop the image to fill the container */
+  display: block;
+}
+
+
+.restaurant-card img {
+  width: 100%;
+  height: 100px;
+  display: block;
+}
+
+.restaurant-name {
+  padding: 5px;
+  font-size: 20px;
+}
+
+.suggestion-nav, .visited-nav {
+  background-color: #353057;
+  color: #F9C12C;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.suggestion-nav.left, .visited-nav.left {
+  left: -0px;
+}
+
+.suggestion-nav.right, .visited-nav.right {
+  right: -0px;
+}
