@@ -37,7 +37,9 @@ function App() {
       });
 
       const data = await response.json();
-      setChatMessages([...chatMessages, { text: message, sender: 'user' }, { text: data.reply, sender: 'bot' }]);
+
+      
+      setChatMessages([...chatMessages, { text: message, sender: 'user' }, { text: data.reply[1].description, sender: 'bot' }]);
     } catch (error) {
       console.error('Error sending message to bot:', error);
       setChatMessages([...chatMessages, { text: message, sender: 'user' }, { text: "Failed to get a response.", sender: 'bot' }]);
@@ -83,7 +85,6 @@ function App() {
     });
   };
 
-  // Calculate the subset of restaurants to display
   const displayedSuggestions = restaurants.suggestions.slice(
     suggestionPage * itemsPerPage,
     (suggestionPage + 1) * itemsPerPage
