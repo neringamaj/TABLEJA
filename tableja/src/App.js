@@ -38,11 +38,28 @@ function App() {
 
       const data = await response.json();
 
-      
-      setChatMessages([...chatMessages, { text: message, sender: 'user' }, { text: data.reply[1].description, sender: 'bot' }]);
+      const description = data.reply[1].description;
+      const address = data.reply[1].address;
+      const restaurantName = data.reply[1].name;
+
+      const botReplyDescription = `Description: ${description}`;
+      const botReplyAddress = `Address: ${address}`;
+      const botReplyRestaurantName = `Restaurant name: ${restaurantName}`;
+
+      setChatMessages([
+        ...chatMessages,
+        { text: message, sender: 'user' },
+        { text: botReplyDescription, sender: 'bot' },
+        { text: botReplyAddress, sender: 'bot' },
+        { text: botReplyRestaurantName, sender: 'bot' },
+      ]);
     } catch (error) {
       console.error('Error sending message to bot:', error);
-      setChatMessages([...chatMessages, { text: message, sender: 'user' }, { text: "Failed to get a response.", sender: 'bot' }]);
+      setChatMessages([
+        ...chatMessages,
+        { text: message, sender: 'user' },
+        { text: 'Failed to get a response.', sender: 'bot' },
+      ]);
     }
   };
 

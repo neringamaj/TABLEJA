@@ -2,18 +2,20 @@
   font-family: 'Arial', sans-serif;
   color: #333;
   height: 100vh;
+  background-color: #F0EBCE;
 }
 
 .App-header {
-  background-color: #353057;
-  color: white;
+  background-color: #4E6C50;
+  color: #ffffff;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* Changed from center to flex-start */
   text-align: center;
   font-size: 16px;
   height: 50px; /* Adjusted height */
   padding: 0; /* Removed padding to allow flexbox to center content */
+  padding-left: 20px; /* Adjust as needed */
 }
 
 
@@ -26,7 +28,9 @@
 }
 
 .chatbot-container {
-  background-color: #353057;
+  background-color: #395144;
+  overflow: auto;
+  height: 50vh;
   color: white;
   flex-basis: 400px;
   display: flex;
@@ -34,11 +38,12 @@
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  height: auto; /* adjusted for content */
 }
 
+
 .chat-messages {
-  overflow-y: auto;
+  overflow: auto;
+  height: 100%; 
   margin-bottom: 20px;
   flex-grow: 1;
 }
@@ -83,9 +88,10 @@
   flex-direction: column;
 }
 
+
 .suggestions-container,
 .visited-container {
-  background-color: #D1CDFF;
+  background-color: #B5C99A;
   padding: 30px;
   border-radius: 10px;
   position: relative;
@@ -101,7 +107,9 @@
 }
 
 .suggestions, .visited {
-  display: grid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   grid-template-columns: repeat(3, 200px);
   gap: 20px;
   column-gap: 90px;
@@ -126,15 +134,25 @@
 }
 
 .suggestion-nav, .visited-nav {
-  background-color: #353057;
+  background-color: #4E6C50; 
   color: #F9C12C;
   border: none;
   padding: 10px;
-  border-radius: 50%;
+  border-radius: 5px;
+  font-size: 16px;
   cursor: pointer;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  transition: background-color 0.3s ease;
+}
+
+.suggestion-nav:hover, .visited-nav:hover {
+  background-color: #395144; /* Darker shade for hover state */
+}
+
+.suggestion-nav:focus, .visited-nav:focus {
+  outline: none; /* Removes the default browser outline */
 }
 
 .suggestion-nav.left, .visited-nav.left {
