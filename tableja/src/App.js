@@ -41,10 +41,12 @@ function App() {
       const description = data.reply[1].description;
       const address = data.reply[1].address;
       const restaurantName = data.reply[1].name;
+      const cuisine = data.reply[1].cuisine;
 
       const botReplyDescription = `Description: ${description}`;
       const botReplyAddress = `Address: ${address}`;
       const botReplyRestaurantName = `Restaurant name: ${restaurantName}`;
+      const botReplyCuisine = `Cuisine: ${cuisine}`;
 
       setChatMessages([
         ...chatMessages,
@@ -52,6 +54,7 @@ function App() {
         { text: botReplyDescription, sender: 'bot' },
         { text: botReplyAddress, sender: 'bot' },
         { text: botReplyRestaurantName, sender: 'bot' },
+        { text: botReplyCuisine, sender: 'bot' },
       ]);
     } catch (error) {
       console.error('Error sending message to bot:', error);
