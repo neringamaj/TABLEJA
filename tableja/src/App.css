@@ -1,7 +1,8 @@
 .App {
   font-family: 'Arial', sans-serif;
   color: #333;
-  height: 100vh;
+  min-height: 100vh;
+  overflow: auto;
   background-color: #F0EBCE;
 }
 
@@ -21,10 +22,12 @@
 
 .App-content {
   display: flex;
+  flex-direction: row;
   padding: 40px;
   padding-left: 80px;
   padding-right: 80px;
   gap: 50px;
+  justify-content: space-between;
 }
 
 .chatbot-container {
@@ -32,12 +35,13 @@
   overflow: auto;
   height: 50vh;
   color: white;
-  flex-basis: 400px;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  flex: 2; /* Adjust this value as needed */
 }
 
 
@@ -83,11 +87,10 @@
 }
 
 .suggestions-section {
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
+  align-items: stretch; /* This will make sure that children expand to fill the available space */
 }
-
 
 .suggestions-container,
 .visited-container {
@@ -95,15 +98,26 @@
   padding: 30px;
   border-radius: 10px;
   position: relative;
-  margin-bottom: 10px;
+  margin-top: 20px; /* Ensure equal top and bottom margins */
+  margin-bottom: 20px; /* Ensure equal top and bottom margins */
   flex-grow: 1;
+}
+
+@media (max-width: 800px) {
+  .App-content {
+    flex-direction: column;
+  }
+
+  .chatbot-container, .suggestions-section {
+    flex: 1 1 100%;
+  }
 }
 
 .section-title {
   margin-top: 0;
   color: #333;
-  font-size: 25px; /* Adjust font size as needed */
-  margin-bottom: 10px; /* Space between the title and the content below it */
+  font-size: 25px; 
+  margin-bottom: 10px; 
 }
 
 .suggestions, .visited {
@@ -116,17 +130,12 @@
 }
 
 .restaurant-card img {
-  width: 100%;
-  object-fit: cover; /* This will crop the image to fill the container */
+  width: 150px; 
+  height: 100px; 
+  object-fit: cover; 
   display: block;
 }
 
-
-.restaurant-card img {
-  width: 100%;
-  height: 100px;
-  display: block;
-}
 
 .restaurant-name {
   padding: 5px;
