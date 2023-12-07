@@ -42,9 +42,9 @@ function App() {
       const address = data.reply[1].address;
       const restaurantName = data.reply[1].name;
 
-      const botReplyDescription = `Description: ${description}`;
-      const botReplyAddress = `Address: ${address}`;
-      const botReplyRestaurantName = `Restaurant name: ${restaurantName}`;
+      const botReplyDescription = `Aprašymas: ${description}`;
+      const botReplyAddress = `Adresas: ${address}`;
+      const botReplyRestaurantName = `Restorano pavadinimas: ${restaurantName}`;
 
       setChatMessages([
         ...chatMessages,
@@ -112,10 +112,22 @@ function App() {
     (visitedPage + 1) * visitedPerPage
   );
 
+  function changeLanguage(lang) {
+   return;
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <h1>TABLEO</h1>
+        <div className="language-icons">
+          <div className="language-icon" onClick={() => changeLanguage('en')}>
+            🇬🇧
+          </div>
+          <div className="language-icon" onClick={() => changeLanguage('lt')}>
+            🇱🇹
+          </div>
+        </div>
       </header>
       <div className="App-content">
         <div className="chatbot-container">
@@ -137,10 +149,9 @@ function App() {
           </div>
         </div>
         <div className="suggestions-section">
-          <h2 className="section-title">Suggestions</h2> {/* Added heading */}
+          <h2 className="section-title">Pasiūlymai</h2> {/* Added heading */}
 
           <div className="suggestions-container">
-            <button className="suggestion-nav left" onClick={() => changeSuggestionPage("prev")}>{"<"}</button>
             <div className="suggestions">
               {displayedSuggestions.map(suggestion => (
                 <div key={suggestion.id} className="restaurant-card">
@@ -149,11 +160,9 @@ function App() {
                 </div>
               ))}
             </div>
-            <button className="suggestion-nav right" onClick={() => changeSuggestionPage("next")}>{">"}</button>
           </div>
-          <h2 className="section-title">Visited</h2> {/* Added heading */}
+          <h2 className="section-title">Aplankytos</h2> {/* Added heading */}
           <div className="visited-container">
-            <button className="visited-nav left" onClick={() => changeVisitedPage("prev")}>{"<"}</button>
             <div className="visited">
               {displayedVisited.map(restaurant => (
                 <div key={restaurant.id} className="restaurant-card">
@@ -162,7 +171,6 @@ function App() {
                 </div>
               ))}
             </div>
-            <button className="visited-nav right" onClick={() => changeVisitedPage("next")}>{">"}</button>
           </div>
         </div>
       </div>
