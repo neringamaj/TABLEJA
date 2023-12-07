@@ -3,11 +3,11 @@ from psycopg2 import sql
 from dotenv import load_dotenv, dotenv_values
 import os
 
-load_dotenv()
-dotenv_values(".env")
-passw = os.getenv("POSTGRESQL_PASSWORD")
-
 def insert_restaurant(id, title):
+    load_dotenv()
+    dotenv_values(".env")
+    passw = os.getenv("POSTGRESQL_PASSWORD")
+
     db_params = {
         'dbname': 'hgqzogzv',
         'user': 'hgqzogzv',
