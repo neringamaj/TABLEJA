@@ -1,14 +1,21 @@
 import psycopg2
 from psycopg2 import sql
+from dotenv import load_dotenv, dotenv_values
+import os
+
+load_dotenv()
+dotenv_values(".env")
+passw = os.getenv("POSTGRESQL_PASSWORD")
 
 def insert_restaurant(id, title):
     db_params = {
-        'dbname': 'postgres',
-        'user': 'postgres',
-        'password': 'admin',
-        'host': 'localhost',
+        'dbname': 'hgqzogzv',
+        'user': 'hgqzogzv',
+        'password': passw,
+        'host': 'isabelle.db.elephantsql.com',
         'port': '5432',
     }
+
 
     new_restaurant = {
         'id': id,
