@@ -1,7 +1,7 @@
-
 from typing import Any
 from qdrant_client import QdrantClient
 from qdrant_client.http import models
+from src.postgre import insert_restaurant
 from openai import OpenAI
 import json
 from dotenv import load_dotenv, dotenv_values
@@ -30,6 +30,7 @@ def upload_restaurant(embedding, id, name, address, rating, description, cuisine
             ),
         ],
     )
+    insert_restaurant(id, name)
 
 
 def get_most_similar_vector_id(query: str) -> json:
