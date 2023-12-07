@@ -9,8 +9,8 @@ function App() {
   const [suggestionPage, setSuggestionPage] = useState(0);
   const [visitedPage, setVisitedPage] = useState(0);
 
-  const itemsPerPage = 6;  // For suggestions
-  const visitedPerPage = 3; // For visited
+  const itemsPerPage = 1;  // For suggestions
+  const visitedPerPage = 0; // For visited
 
   useEffect(() => {
     fetchRestaurants();
@@ -53,6 +53,16 @@ function App() {
         { text: botReplyAddress, sender: 'bot' },
         { text: botReplyRestaurantName, sender: 'bot' },
       ]);
+
+      const resp = await fetch(`/api/restaurant?id=${data.id}`,{
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      const restaurant = await resp.json();
+      console.log(restaurant);
+      
     } catch (error) {
       console.error('Error sending message to bot:', error);
       setChatMessages([
