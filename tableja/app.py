@@ -28,7 +28,7 @@ def get_restaurantas():
     id = request.args.get('id')
     result = get_restaurant(id)
 
-    return jsonify({"image": result})
+    return jsonify({"restaurant": result})
 
 if __name__ == '__main__':
     app.run(debug=True)

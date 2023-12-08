@@ -35,7 +35,7 @@ def get_restaurant(id):
             cursor.close()
         if connection:
             connection.close()
-    return restaurant[2]
+    return restaurant
     
 
     
