@@ -5,12 +5,12 @@ function App() {
   const [userInput, setUserInput] = useState('');
   const [chatMessages, setChatMessages] = useState([]);
   const [restaurants, setRestaurants] = useState({ suggestions: [], visited: [] });
-  const [suggestionPage, setSuggestionPage] = useState(0);
   const [visitedPage, setVisitedPage] = useState(0);
 
-  const itemsPerPage = 1;  // Adjust as needed
-  const visitedPerPage = 1; // Currently not used but declared for future use
+  const itemsPerPage = 5;  // Adjust as needed
+  const visitedPerPage = 5; // Currently not used but declared for future use
 
+  // ... (Other functions and state variables)
   const sendMessageToBot = async (message) => {
     try {
       const response = await fetch('http://127.0.0.1:5000/api/chatbot', {
@@ -22,17 +22,9 @@ function App() {
       });
 
       const data = await response.json();
-
-     /*  // Assuming data.reply contains an array of restaurant IDs as a response
-      data.reply.forEach(restaurantId => {
-        fetchRestaurantDetails(restaurantId);
-      });
- */
-      const id1 = data.id;
+      const id1 = data.id.toString();
       fetchRestaurantDetails(id1);
-      //const id2 = data.reply[2].id;
-      //fetchRestaurantDetails(id2);
-
+      
       const description = data.reply[1].description;
       const address = data.reply[1].address;
       const restaurantName = data.reply[1].name;
@@ -41,7 +33,6 @@ function App() {
       const botReplyAddress = `Address: ${address}`;
       const botReplyRestaurantName = `Restaurant name: ${restaurantName}`;
 
-      // Updating chat messages
       setChatMessages([
         ...chatMessages,
         { text: message, sender: 'user' },
@@ -58,16 +49,25 @@ function App() {
       ]);
     }
   };
-
-  // Fetch restaurant details
   const fetchRestaurantDetails = async (restaurantId) => {
     try {
       const response = await fetch(`http://127.0.0.1:5000/api/restaurants/${restaurantId}`);
       const restaurantDetails = await response.json();
+      const url = restaurantDetails.url;
+      const name = restaurantDetails.name;
+      const id = restaurantDetails.id;
+
+      const restaurant = { url, name, id };
 
       setRestaurants(prevRestaurants => ({
         ...prevRestaurants,
-        suggestions: [...prevRestaurants.suggestions, restaurantDetails]
+        suggestions: [...prevRestaurants.suggestions, 
+          {
+            id: restaurant.id,
+            name: restaurant.name,
+            image_url: restaurant.url,
+          },
+        ],
       }));
     } catch (error) {
       console.error('Error fetching restaurant details:', error);
@@ -92,7 +92,7 @@ function App() {
 
   const changeSuggestionPage = (direction) => {
     const totalPages = Math.ceil(restaurants.suggestions.length / itemsPerPage);
-    setSuggestionPage(prevPage => {
+    setRestaurants(prevPage => {
       if (direction === "next") {
         return (prevPage + 1) % totalPages;
       } else {
@@ -111,11 +111,6 @@ function App() {
       }
     });
   };
-
-  const displayedSuggestions = restaurants.suggestions.slice(
-    suggestionPage * itemsPerPage,
-    (suggestionPage + 1) * itemsPerPage
-  );
 
   const displayedVisited = restaurants.visited.slice(
     visitedPage * visitedPerPage,
@@ -152,12 +147,14 @@ function App() {
           <div className="suggestions-container">
             <button className="suggestion-nav left" onClick={() => changeSuggestionPage("prev")}>{"<"}</button>
             <div className="suggestions">
-              {displayedSuggestions.map(suggestion => (
-                <div key={suggestion.id} className="restaurant-card">
+            {restaurants.suggestions.map(suggestion => (
+              <div key={suggestion.id} className="restaurant-card">
+                <a href={suggestion.image_url} target="_blank" rel="noopener noreferrer">
                   <img src={suggestion.image_url} alt={suggestion.name} />
-                  <div className="restaurant-name">{suggestion.name}</div>
-                </div>
-              ))}
+                </a>
+                <div className="restaurant-name">{suggestion.name}</div>
+              </div>
+            ))}
             </div>
             <button className="suggestion-nav right" onClick={() => changeSuggestionPage("next")}>{">"}</button>
           </div>
