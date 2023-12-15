@@ -1,30 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
   const [userInput, setUserInput] = useState('');
   const [chatMessages, setChatMessages] = useState([]);
   const [restaurants, setRestaurants] = useState({ suggestions: [], visited: [] });
-
   const [suggestionPage, setSuggestionPage] = useState(0);
   const [visitedPage, setVisitedPage] = useState(0);
 
-  const itemsPerPage = 1;  // For suggestions
-  const visitedPerPage = 0; // For visited
-
-  useEffect(() => {
-    fetchRestaurants();
-  }, []);
-
-  const fetchRestaurants = async () => {
-    try {
-      const response = await fetch('/api/restaurants');
-      const data = await response.json();
-      setRestaurants(data);
-    } catch (error) {
-      console.error('Error fetching restaurant data:', error);
-    }
-  };
+  const itemsPerPage = 1;  // Adjust as needed
+  const visitedPerPage = 1; // Currently not used but declared for future use
 
   const sendMessageToBot = async (message) => {
     try {
@@ -38,6 +23,16 @@ function App() {
 
       const data = await response.json();
 
+     /*  // Assuming data.reply contains an array of restaurant IDs as a response
+      data.reply.forEach(restaurantId => {
+        fetchRestaurantDetails(restaurantId);
+      });
+ */
+      const id1 = data.id;
+      fetchRestaurantDetails(id1);
+      //const id2 = data.reply[2].id;
+      //fetchRestaurantDetails(id2);
+
       const description = data.reply[1].description;
       const address = data.reply[1].address;
       const restaurantName = data.reply[1].name;
@@ -46,6 +41,7 @@ function App() {
       const botReplyAddress = `Address: ${address}`;
       const botReplyRestaurantName = `Restaurant name: ${restaurantName}`;
 
+      // Updating chat messages
       setChatMessages([
         ...chatMessages,
         { text: message, sender: 'user' },
@@ -53,23 +49,28 @@ function App() {
         { text: botReplyAddress, sender: 'bot' },
         { text: botReplyRestaurantName, sender: 'bot' },
       ]);
-
-      const resp = await fetch(`/api/restaurant?id=${data.id}`,{
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-      const restaurant = await resp.json();
-      console.log(restaurant);
-      
     } catch (error) {
       console.error('Error sending message to bot:', error);
       setChatMessages([
         ...chatMessages,
         { text: message, sender: 'user' },
-        { text: 'Failed to get a response.', sender: 'bot' },
+        { text: 'Failed to get a response from the chatbot.', sender: 'bot' },
       ]);
+    }
+  };
+
+  // Fetch restaurant details
+  const fetchRestaurantDetails = async (restaurantId) => {
+    try {
+      const response = await fetch(`http://127.0.0.1:5000/api/restaurants/${restaurantId}`);
+      const restaurantDetails = await response.json();
+
+      setRestaurants(prevRestaurants => ({
+        ...prevRestaurants,
+        suggestions: [...prevRestaurants.suggestions, restaurantDetails]
+      }));
+    } catch (error) {
+      console.error('Error fetching restaurant details:', error);
     }
   };
 
@@ -79,7 +80,6 @@ function App() {
 
   const handleSendMessage = () => {
     if (!userInput.trim()) return;
-
     sendMessageToBot(userInput);
     setUserInput('');
   };
@@ -92,7 +92,7 @@ function App() {
 
   const changeSuggestionPage = (direction) => {
     const totalPages = Math.ceil(restaurants.suggestions.length / itemsPerPage);
-    setSuggestionPage((prevPage) => {
+    setSuggestionPage(prevPage => {
       if (direction === "next") {
         return (prevPage + 1) % totalPages;
       } else {
@@ -103,7 +103,7 @@ function App() {
 
   const changeVisitedPage = (direction) => {
     const totalPages = Math.ceil(restaurants.visited.length / visitedPerPage);
-    setVisitedPage((prevPage) => {
+    setVisitedPage(prevPage => {
       if (direction === "next") {
         return (prevPage + 1) % totalPages;
       } else {
@@ -147,27 +147,27 @@ function App() {
           </div>
         </div>
         <div className="suggestions-section">
-          <h2 className="section-title">Suggestions</h2> {/* Added heading */}
+          <h2 className="section-title">Suggestions</h2>
 
           <div className="suggestions-container">
             <button className="suggestion-nav left" onClick={() => changeSuggestionPage("prev")}>{"<"}</button>
             <div className="suggestions">
               {displayedSuggestions.map(suggestion => (
                 <div key={suggestion.id} className="restaurant-card">
-                  <img src={suggestion.image} alt={suggestion.name} />
+                  <img src={suggestion.image_url} alt={suggestion.name} />
                   <div className="restaurant-name">{suggestion.name}</div>
                 </div>
               ))}
             </div>
             <button className="suggestion-nav right" onClick={() => changeSuggestionPage("next")}>{">"}</button>
           </div>
-          <h2 className="section-title">Visited</h2> {/* Added heading */}
+          <h2 className="section-title">Visited</h2>
           <div className="visited-container">
             <button className="visited-nav left" onClick={() => changeVisitedPage("prev")}>{"<"}</button>
             <div className="visited">
               {displayedVisited.map(restaurant => (
                 <div key={restaurant.id} className="restaurant-card">
-                  <img src={restaurant.image} alt={restaurant.name} />
+                  <img src={restaurant.image_url} alt={restaurant.name} />
                   <div className="restaurant-name">{restaurant.name}</div>
                 </div>
               ))}
