@@ -93,7 +93,7 @@ def get_photo_url(api_key, photo_reference):
     return 'No photo available'
 
 
-location = '54.89701840237929, 23.92111125040317' 
+location = '54.89701840237929, 23.92111125040316' 
 radius = 1000  
 
 restaurants = get_restaurants(api_key, location, radius)
