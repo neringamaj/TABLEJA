@@ -8,7 +8,7 @@ import os
 load_dotenv()
 dotenv_values(".env")
 
-client = QdrantClient("localhost", port=6333)
+client = QdrantClient("https://71b6c4a9-4a80-4ebb-8e75-eeeac394b2b3.us-east4-0.gcp.cloud.qdrant.io", api_key="QDRANT_API")
 client_openAI = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 def upload_restaurant(embedding, id, name, address, rating, description, cuisine, priceRange):
