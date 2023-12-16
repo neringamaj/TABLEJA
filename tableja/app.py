@@ -1,10 +1,25 @@
-from flask import Flask, jsonify, request, render_template
+from flask import Flask, jsonify, request, abort, render_template
 from flask_cors import CORS
 from src.database import get_most_similar_vector_id
 from src.postgre import get_restaurant
+import subprocess
+import hmac
+import os
 
 app = Flask(__name__)
 CORS(app)
+
+@app.route('/update_webhook', methods=['POST'])
+def update_webhook():
+    secret = bytes(os.environ.get('WEBHOOK_SECRET'), 'UTF-8')
+    signature = 'sha1=' + hmac.new(secret, request.data, 'sha1').hexdigest()
+    if not hmac.compare_digest(signature, request.headers.get('X-Hub-Signature', '')):
+        abort(403)
+
+    subprocess.call(['git', 'pull'])
+    subprocess.call(['touch', '/var/www/neringamaja_pythonanywhere_com_wsgi.py'])
+
+    return 'Webhook received', 200
 
 @app.route('/api/chatbot', methods=['POST'])
 def chatbot_response():
@@ -43,20 +58,5 @@ def get_recommended_restaurants():
 
     return jsonify(recommended_restaurants)
 
-""" 
-@app.route('/api/recommended_restaurants/<string:restaurant_id>', methods=['GET'])
-def get_visited_restaurants(restaurant_id):
-    try:
-        restaurant_details = get_restaurant(restaurant_id)
-        print(restaurant_details[2])
-        print(jsonify(restaurant_details))
-        if restaurant_details:
-            return jsonify({"id": restaurant_details[0], "name": restaurant_details[1], "url": restaurant_details[2]})
-        else:
-            return jsonify({"error": "Restaurant not found"}), 404
-    except Exception as e:
-        print(f"Error fetching restaurant details: {e}")
-        return jsonify({"error": "Internal server error"}), 500
- """
 if __name__ == '__main__':
     app.run(debug=True)

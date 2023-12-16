@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import config from './config';
 
 function App() {
   const [userInput, setUserInput] = useState('');
@@ -17,7 +18,7 @@ function App() {
 
   const fetchRecommendedRestaurants = async () => {
     try {
-      const response = await fetch('http://127.0.0.1:5000/api/recommended');
+      const response = await fetch(`${config.API_ENDPOINT}/api/recommended`);
       const data = await response.json();
       const newRestaurants = data.map(rest => ({
         id: rest.id,
@@ -36,7 +37,7 @@ function App() {
 
   const sendMessageToBot = async (message) => {
     try {
-      const response = await fetch('http://127.0.0.1:5000/api/chatbot', {
+      const response = await fetch(`${config.API_ENDPOINT}/api/chatbot`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -74,7 +75,7 @@ function App() {
   };
   const fetchRestaurantDetails = async (restaurantId) => {
     try {
-      const response = await fetch(`http://127.0.0.1:5000/api/restaurants/${restaurantId}`);
+      const response = await fetch(`${config.API_ENDPOINT}/api/restaurants/${restaurantId}`);
       const restaurantDetails = await response.json();
       const url = restaurantDetails.url;
       const name = restaurantDetails.name;
