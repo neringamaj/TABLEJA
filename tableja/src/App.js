@@ -1,16 +1,39 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
   const [userInput, setUserInput] = useState('');
   const [chatMessages, setChatMessages] = useState([]);
-  const [restaurants, setRestaurants] = useState({ suggestions: [], visited: [] });
-  const [visitedPage, setVisitedPage] = useState(0);
+  const [restaurants, setRestaurants] = useState({ suggestions: [], recommended: [] });
+  
+  const [recommendedPage, setRecommendedPage] = useState(0);
 
   const itemsPerPage = 5;  // Adjust as needed
   const visitedPerPage = 5; // Currently not used but declared for future use
 
-  // ... (Other functions and state variables)
+  useEffect(() => {
+    fetchRecommendedRestaurants();
+  }, []); 
+
+  const fetchRecommendedRestaurants = async () => {
+    try {
+      const response = await fetch('http://127.0.0.1:5000/api/recommended');
+      const data = await response.json();
+      const newRestaurants = data.map(rest => ({
+        id: rest.id,
+        name: rest.name,
+        image_url: rest.url,
+      }));
+  
+      setRestaurants(prevRestaurants => ({
+        ...prevRestaurants,
+        recommended: newRestaurants,
+      }));
+    } catch (error) {
+      console.error('Error fetching recommended restaurants:', error);
+    }
+  };
+
   const sendMessageToBot = async (message) => {
     try {
       const response = await fetch('http://127.0.0.1:5000/api/chatbot', {
@@ -90,7 +113,7 @@ function App() {
     }
   };
 
-  const changeSuggestionPage = (direction) => {
+  /* const changeSuggestionPage = (direction) => {
     const totalPages = Math.ceil(restaurants.suggestions.length / itemsPerPage);
     setRestaurants(prevPage => {
       if (direction === "next") {
@@ -110,12 +133,7 @@ function App() {
         return (prevPage - 1 + totalPages) % totalPages;
       }
     });
-  };
-
-  const displayedVisited = restaurants.visited.slice(
-    visitedPage * visitedPerPage,
-    (visitedPage + 1) * visitedPerPage
-  );
+  }; */
 
   function changeLanguage(lang) {
    return;
@@ -168,16 +186,18 @@ function App() {
             ))}
             </div>
           </div>
-          <h2 className="section-title">Visited</h2>
+          <h2 className="section-title">Recommended</h2>
 
           <div className="visited-container">
             <div className="visited">
-              {displayedVisited.map(restaurant => (
-                <div key={restaurant.id} className="restaurant-card">
-                  <img src={restaurant.image_url} alt={restaurant.name} />
-                  <div className="restaurant-name">{restaurant.name}</div>
-                </div>
-              ))}
+              {restaurants.recommended.map(recommended => (
+              <div key={recommended.id} className="restaurant-card">
+                <a href={recommended.image_url} target="_blank" rel="noopener noreferrer">
+                  <img src={recommended.image_url} alt={recommended.name} />
+                </a>
+                <div className="restaurant-name">{recommended.name}</div>
+              </div>
+            ))}
             </div>
           </div>
         </div>
