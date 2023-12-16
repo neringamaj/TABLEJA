@@ -1,46 +1,75 @@
 .App {
   font-family: 'Arial', sans-serif;
-  color: #333;
+  color: #2c3e50; /* Dark text color */
   height: 100vh;
-  background-color: #F0EBCE;
+  background-color: whitesmoke; /* Light background color */
+  position: relative; /* Added position relative for absolute positioning */
 }
 
+/* Language Icons Styling */
+.language-icons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.language-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+
 .App-header {
-  background-color: #4E6C50;
+  background-color: #353057; /* Green header background */
   color: #ffffff;
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Changed from center to flex-start */
+  justify-content: flex-start;
   text-align: center;
-  font-size: 16px;
-  height: 50px; /* Adjusted height */
-  padding: 0; /* Removed padding to allow flexbox to center content */
-  padding-left: 20px; /* Adjust as needed */
+  font-size: 24px;
+  height: 80px;
+  padding-left: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
 }
-
 
 .App-content {
   display: flex;
   padding: 40px;
-  padding-left: 80px;
-  padding-right: 80px;
   gap: 50px;
 }
 
+/* Updated Chatbot Container Styling with Animations */
 .chatbot-container {
-  background-color: #395144;
+  background-color: #353057;
   overflow: auto;
   height: 50vh;
-  color: white;
+  color: #ffffff;
   flex-basis: 400px;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 0.5s ease; /* Fade in animation */
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
+/* Stylish Chat Message Styling */
 .chat-messages {
   overflow: auto;
   height: 100%; 
@@ -55,14 +84,38 @@
   border-radius: 20px;
   margin-bottom: 10px;
   word-break: break-word;
+  animation: fadeIn 0.5s ease; /* Fade in animation for each message */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .chat-message.user {
-  background-color: #4caf50;
+  background-color: #2ecc71;
 }
 
+/* Improved Chat Input Styling with Hover Animation */
 .chat-input-container {
   display: flex;
+  margin-top: 10px;
+  animation: slideInUp 0.5s ease; /* Slide in animation */
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .chat-input {
@@ -70,95 +123,84 @@
   padding: 10px;
   border-radius: 5px;
   border: none;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth background color and text color transition */
+}
+
+.chat-input:hover,
+.chat-input:active,
+.chat-input:focus {
+  background-color: #2c3e50; /* Darker background on hover/active/focus */
+  color: white; /* Text color on hover/active/focus */
 }
 
 .chat-send-button {
   padding: 10px;
-  background-color: #F9C12C;
-  color: #333;
+  background-color: #ffffff;
+  color: black;
   border: none;
   margin-left: 10px;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
 }
 
+.chat-send-button:hover {
+  background-color: #2c3e50; /* Darker background on hover */
+  color: white;
+}
+
+/* Updated Suggestions Section Styling */
 .suggestions-section {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
 
-
-.suggestions-container,
-.visited-container {
-  background-color: #B5C99A;
-  padding: 30px;
+/* Updated Suggestions Section Styling */
+.suggestions-container {
+  background-color: #353057; /* Blue suggestions background */
+  padding: 20px; /* Adjusted padding for better spacing */
   border-radius: 10px;
-  position: relative;
-  margin-bottom: 10px;
-  flex-grow: 1;
+  margin-bottom: 20px; /* Increased margin for better separation */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Make the container unscrollable */
 }
 
 .section-title {
   margin-top: 0;
-  color: #333;
-  font-size: 25px; /* Adjust font size as needed */
-  margin-bottom: 10px; /* Space between the title and the content below it */
+  color: black;
+  font-size: 25px;
+  margin-bottom: 10px;
 }
 
 .suggestions, .visited {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  grid-template-columns: repeat(3, 200px);
   gap: 20px;
-  column-gap: 90px;
+  overflow-x: auto; /* Make the suggestions horizontally scrollable */
+  scroll-snap-type: x proximity; /* Enable snap scrolling */
+}
+
+/* Restyled Restaurant Card Styling */
+.restaurant-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.restaurant-card:hover {
+  transform: scale(1.05); /* Enlarge on hover effect */
 }
 
 .restaurant-card img {
-  width: 100%;
-  object-fit: cover; /* This will crop the image to fill the container */
+  width: 185px;
+  height: 200px; /* Adjusted height for better appearance */
+  object-fit: cover;
   display: block;
-}
-
-
-.restaurant-card img {
-  width: 100%;
-  height: 100px;
-  display: block;
+  border-radius: 10px 10px 0 0;
 }
 
 .restaurant-name {
-  padding: 5px;
-  font-size: 20px;
-}
-
-.suggestion-nav, .visited-nav {
-  background-color: #4E6C50; 
-  color: #F9C12C;
-  border: none;
   padding: 10px;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: background-color 0.3s ease;
-}
-
-.suggestion-nav:hover, .visited-nav:hover {
-  background-color: #395144; /* Darker shade for hover state */
-}
-
-.suggestion-nav:focus, .visited-nav:focus {
-  outline: none; /* Removes the default browser outline */
-}
-
-.suggestion-nav.left, .visited-nav.left {
-  left: -0px;
-}
-
-.suggestion-nav.right, .visited-nav.right {
-  right: -0px;
+  font-size: 20px;
 }
