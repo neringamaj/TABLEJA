@@ -42,7 +42,17 @@ def get_most_similar_vector_id(query: str) -> json:
         query_vector=query_embedding,
         with_vectors=False,
         with_payload=True,
-    )
+        filter={
+            "must": [
+                {
+                    "key": "show",
+                    "match": {
+                        "value": True
+                    }
+                }
+                ]
+            }
+        )
 
     # Extract the ID of the most similar vector
     most_similar_vector_id = search_results[0] 
