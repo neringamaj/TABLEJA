@@ -1,6 +1,7 @@
 from anyio import sleep
 from openai import OpenAI
 from dotenv import load_dotenv, dotenv_values
+from database import get_most_similar_vector_id
 import os
 
 load_dotenv()
@@ -89,24 +90,24 @@ def chat_flow():
 #   }]
 # )
 
-def get_most_similar_vector_id(query: str):
-    # Generate the embedding for the query
-    query_embedding = client.embeddings.create(model="text-embedding-ada-002", input=[query]).data[0].embedding
+# def get_most_similar_vector_id(query: str):
+#     # Generate the embedding for the query
+#     query_embedding = client.embeddings.create(model="text-embedding-ada-002", input=[query]).data[0].embedding
 
 
-    search_results = client.search(
-        collection_name="restaurants",
-        query_vector=query_embedding,
-        with_vectors=False,
-        with_payload=True,
-    )
+#     search_results = client.search(
+#         collection_name="restaurants",
+#         query_vector=query_embedding,
+#         with_vectors=False,
+#         with_payload=True,
+#     )
 
-    # Extract the ID of the most similar vector
-    most_similar_vector_id = search_results[0] 
-    json_results = [result for result in most_similar_vector_id]
-    json_object = json.dumps(json_results, indent=4)
-    json_object = json.loads(json_object)
-    return json_object
+#     # Extract the ID of the most similar vector
+#     most_similar_vector_id = search_results[0] 
+#     json_results = [result for result in most_similar_vector_id]
+#     json_object = json.dumps(json_results, indent=4)
+#     json_object = json.loads(json_object)
+#     return json_object
 
 
 
