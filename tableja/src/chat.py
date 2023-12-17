@@ -7,77 +7,88 @@ import os
 load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
+
 def get_openai_response(prompt):
     """
     This function sends a prompt to the OpenAI API and returns the response.
     """
     try:
         response = client.completions.create(
-          model="text-davinci-003",
-          prompt=prompt,
-          max_tokens=150
+            model="text-davinci-003",
+            prompt=prompt,
+            max_tokens=150
         )
         return response.choices[0].text.strip()
     except Exception as e:
         print(f"Error: {e}")
         return None
-    
+
 
 def chat_flow():
-  print("Welcome to the Restaurant Finder Chatbot!")
-  user_input = ""
+    print("Welcome to the Restaurant Finder Chatbot!")
+    user_input = ""
 
-  query = ""
-  # Example of a conversation flow
-  while True:
-    # Asking about cuisine preference
-    user_input = str(input("What are your location preferences?"))
-    response = get_openai_response(f"Based on {user_input}, extract the location.")
-    query = "Restaurant address: " + response
+    query = ""
+    # Example of a conversation flow
+    while True:
+        # Asking about cuisine preference
+        user_input = str(input("What are your location preferences?"))
+        response = get_openai_response(
+            f"USER INPUT LANGUAGE: LITHUANIAN. RESPONSE LANGUAGE: ENGLISH. This is restaurant reservation chatbot user input. User defined location where he would like to eat: {user_input}. Extract the location as accurate as possible including city, district or part of the city, key landmark or exact address. Do not include country name. Do not include any additional information. Do not use commas.")
+        query = "Restaurant address: " + response
+        print(response)
+        # Getting location preference
+        user_input = str(
+            input("What is your preferred restaurant price range from 1 to 3?"))
+        response = get_openai_response(
+            f"USER INPUT LANGUAGE: LITHUANIAN. RESPONSE LANGUAGE: ENGLISH. User defined price preference: {user_input}. Return the following number according to user price input: 1 - cheap, budget friendly, 2 - medium, 3 - expensive, luxury. Only choose one of the three options and return just a number.")
+        query += "Price level: " + response
+        print(response)
+        # Getting price preference
+        user_input = str(input("What is your preferred restaurant cuisine?"))
+        response = get_openai_response(
+            f"User input language: LITHUANIAN. RESPONSE LANGUAGE: ENGLISH. Based on user prefered cuisine: {user_input}, return 2 keywords that define this cuisine. First of them must be name of cuisine and second one must be most popular dish of this cuisine.")
+        query += "Restaurant cuisine: " + response
+        print(response)
+        # Additional requirements
+        user_input = str(input("Do you have any additional requirements?"))
+        response = get_openai_response(
+            f"User input language: LITHUANIAN. RESPONSE LANGUAGE: ENGLISH. User defined additional requirements: {user_input}. If user expressed some additional requirements, extract 1 keyword from it. If not, return empty string.")
+        query += "About: " + response
 
-    # Getting location preference
-    user_input = str(input("What is your preferred restaurant price range from 1 to 3?"))
-    response = get_openai_response(f"Based {user_input}, extract the price range from 1 to 3. YOU CAN ONLY CHOOSE FROM 1 TO 3. 1 would be the cheapest and 3 would be the most expensive.")
-    query += "Price level: " + response
+        print(response)
 
-    # Getting price preference
-    user_input = str(input("What is your preferred restaurant cuisine?"))
-    response = get_openai_response(f"Based on {user_input}, extract the cuisine.")
-    query += "Restaurant cuisine: " + response
+        id = get_most_similar_vector_id(query)
+        print(id)
 
-    # Additional requirements
-    user_input = str(input("Do you have any additional requirements?"))
-    response = get_openai_response(f"Based on {user_input}, extract the additional requirements.")
-    query += "About: " + response
+        break
 
 
-    print(query)
+# chat_flow()
 
-    id = get_most_similar_vector_id(query)
-    print(id)
-
-    break
 
 def get_data_flow(data):
-   query = ""
+    query = ""
 
-   response = get_openai_response(f"Based on {data[0]}, extract the location.")
-   query += "Restaurant address: " + response
+    response = get_openai_response(
+        f"USER INPUT LANGUAGE: LITHUANIAN. RESPONSE LANGUAGE: ENGLISH. This is restaurant reservation chatbot user input. User defined location where he would like to eat: {data[1]}. Extract the location as accurate as possible including city, district or part of the city, key landmark or exact address. Do not include country name. Do not include any additional information. Do not use commas.")
+    query += "Restaurant address: " + response
+    print(response)
+    response = get_openai_response(
+        f"USER INPUT LANGUAGE: LITHUANIAN. RESPONSE LANGUAGE: ENGLISH. User defined price preference: {data[2]}. Return the following number according to user price input: 1 - cheap, budget friendly, 2 - medium, 3 - expensive, luxury. Only choose one of the three options and return just a number.")
+    query += "Price level: " + response
+    print(response)
+    response = get_openai_response(
+        f"User input language: LITHUANIAN. RESPONSE LANGUAGE: ENGLISH. Based on user prefered cuisine: {data[3]}, return 2 keywords that define this cuisine. First of them must be name of cuisine and second one must be most popular dish of this cuisine. Do not include any other information")
+    query += "Restaurant cuisine: " + response
+    print(response)
+    # response = get_openai_response(
+    #     f"User input language: LITHUANIAN. RESPONSE LANGUAGE: ENGLISH. User defined additional requirements: {data[4]}. If user expressed some additional requirements, extract 1 keyword from it. If not, return empty string.")
+    # query += "About: " + response
+    print(query)
+    result = get_most_similar_vector_id(query)
 
-   response = get_openai_response(f"Based {data[1]}, extract the price range from 1 to 3. YOU CAN ONLY CHOOSE FROM 1 TO 3. 1 would be the cheapest and 3 would be the most expensive.")
-   query += "Price level: " + response
-
-   response = get_openai_response(f"Based on {data[2]}, extract the cuisine.")
-   query += "Restaurant cuisine: " + response
-
-   response = get_openai_response(f"Based on {data[3]}, extract the additional requirements.")
-   query += "About: " + response
-
-   result = get_most_similar_vector_id(query)
-
-   return result
-
-
+    return result
 
 
 # def ask_question(prompt):
@@ -125,12 +136,11 @@ def get_data_flow(data):
 #     )
 
 #     # Extract the ID of the most similar vector
-#     most_similar_vector_id = search_results[0] 
+#     most_similar_vector_id = search_results[0]
 #     json_results = [result for result in most_similar_vector_id]
 #     json_object = json.dumps(json_results, indent=4)
 #     json_object = json.loads(json_object)
 #     return json_object
 
 
-
-#chat_flow()
+# chat_flow()
