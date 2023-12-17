@@ -2,6 +2,7 @@ from flask import Flask, jsonify, request, abort, render_template
 from flask_cors import CORS
 from src.database import get_most_similar_vector_id
 from src.postgre import get_restaurant
+from src.chat import get_data_flow
 import subprocess
 import hmac
 import os
@@ -21,12 +22,12 @@ def update_webhook():
 
     return 'Webhook received', 200
 
-@app.route('/api/chatbot', methods=['POST'])
-def chatbot_response():
-    user_message = request.json.get('message', '')
-    result = get_most_similar_vector_id(user_message)
+# @app.route('/api/chatbot', methods=['POST'])
+# def chatbot_response():
+#     user_message = request.json.get('message', '')
+#     result = get_most_similar_vector_id(user_message)
 
-    return jsonify({"reply": result[3], "id": result[0][1]})
+#     return jsonify({"reply": result[3], "id": result[0][1]})
 
 @app.route('/api/restaurants/<string:restaurant_id>', methods=['GET'])
 def get_restaurant_details(restaurant_id):
@@ -57,6 +58,23 @@ def get_recommended_restaurants():
     print(recommended_restaurants)
 
     return jsonify(recommended_restaurants)
+
+
+@app.route('/api/chatbot', methods=['POST'])
+def chatbot_response():
+    data = request.get_json()
+    message = data['message']
+
+    result = get_data_flow(message)
+
+    return jsonify({"reply": result[3], "id": result[0][1]})
+
+# @app.route('/api/chatbot', methods=['POST'])
+# def chatbot_response():
+#     user_message = request.json.get('message', '')
+#     result = get_most_similar_vector_id(user_message)
+
+#     return jsonify({"reply": result[3], "id": result[0][1]})
 
 if __name__ == '__main__':
     app.run(debug=True)

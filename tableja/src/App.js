@@ -4,13 +4,27 @@ import config from './config';
 
 function App() {
   const [userInput, setUserInput] = useState('');
-  const [chatMessages, setChatMessages] = useState([]);
+  
   const [restaurants, setRestaurants] = useState({ suggestions: [], recommended: [] });
+
+  const [requiredData, setRequiredData] = useState([]);
   
   const [recommendedPage, setRecommendedPage] = useState(0);
 
-  const itemsPerPage = 5;  // Adjust as needed
-  const visitedPerPage = 5; // Currently not used but declared for future use
+  const itemsPerPage = 5;
+  const visitedPerPage = 5;
+
+  const questions = [
+    'What are your location preferences?',
+    'What is your preferred restaurant price range from 1 to 3?',
+    'What is your preferred restaurant cuisine?',
+    'Do you have any additional requirements?',
+  ];
+
+  const [chatMessages, setChatMessages] = useState([
+    { text: 'Welcome to the Restaurant Finder Chatbot!', sender: 'bot' }
+  ]);
+
 
   useEffect(() => {
     fetchRecommendedRestaurants();
@@ -35,31 +49,32 @@ function App() {
     }
   };
 
-  const sendMessageToBot = async (message) => {
+  const sendMessageToBot = async (message, userInput) => {
     try {
       const response = await fetch(`${config.API_ENDPOINT}/api/chatbot`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ message }),
+        body: JSON.stringify({ message: requiredData }),
       });
-
+  
       const data = await response.json();
+
       const id1 = data.id.toString();
       fetchRestaurantDetails(id1);
-      
+  
       const description = data.reply[1].description;
       const address = data.reply[1].address;
       const restaurantName = data.reply[1].name;
-
+  
       const botReplyDescription = `Aprašymas: ${description}`;
       const botReplyAddress = `Adresas: ${address}`;
       const botReplyRestaurantName = `Restorano pavadinimas: ${restaurantName}`;
-
+  
       setChatMessages([
         ...chatMessages,
-        { text: message, sender: 'user' },
+        { text: userInput, sender: 'user' },
         { text: botReplyDescription, sender: 'bot' },
         { text: botReplyAddress, sender: 'bot' },
         { text: botReplyRestaurantName, sender: 'bot' },
@@ -101,11 +116,27 @@ function App() {
   const handleUserInput = (e) => {
     setUserInput(e.target.value);
   };
-
+  
   const handleSendMessage = () => {
     if (!userInput.trim()) return;
-    sendMessageToBot(userInput);
+  
+    setChatMessages(prevMessages => [
+      ...prevMessages,
+      { text: userInput, sender: 'user' },
+    ]);
+  
+    setRequiredData(prevData => [...prevData, userInput]);
+  
     setUserInput('');
+  
+    if (requiredData.length < questions.length) {
+      setChatMessages(prevMessages => [
+        ...prevMessages,
+        { text: questions[requiredData.length], sender: 'bot' },
+      ]);
+    } else {
+      sendMessageToBot(requiredData.join(' '), userInput);
+    }
   };
 
   const handleKeyPress = (e) => {

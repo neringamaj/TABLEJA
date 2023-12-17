@@ -1,7 +1,7 @@
 from anyio import sleep
 from openai import OpenAI
 from dotenv import load_dotenv, dotenv_values
-from database import get_most_similar_vector_id
+from src.database import get_most_similar_vector_id
 import os
 
 load_dotenv()
@@ -58,6 +58,28 @@ def chat_flow():
 
     break
 
+def get_data_flow(data):
+   query = ""
+
+   response = get_openai_response(f"Based on {data[0]}, extract the location.")
+   query += "Restaurant address: " + response
+
+   response = get_openai_response(f"Based {data[1]}, extract the price range from 1 to 3. YOU CAN ONLY CHOOSE FROM 1 TO 3. 1 would be the cheapest and 3 would be the most expensive.")
+   query += "Price level: " + response
+
+   response = get_openai_response(f"Based on {data[2]}, extract the cuisine.")
+   query += "Restaurant cuisine: " + response
+
+   response = get_openai_response(f"Based on {data[3]}, extract the additional requirements.")
+   query += "About: " + response
+
+   result = get_most_similar_vector_id(query)
+
+   return result
+
+
+
+
 # def ask_question(prompt):
 #     response = client.chat.completions.create(model="gpt-3.5-turbo",
 #     messages=[
@@ -111,4 +133,4 @@ def chat_flow():
 
 
 
-chat_flow()
+#chat_flow()
