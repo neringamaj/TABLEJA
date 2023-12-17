@@ -64,7 +64,8 @@ def get_recommended_restaurants():
 def chatbot_response():
     data = request.get_json()
     message = data['message']
-
+    print("!!!!!!!")
+    print(message)
     result = get_data_flow(message)
 
     return jsonify({"reply": result[3], "id": result[0][1]})

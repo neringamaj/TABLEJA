@@ -82,9 +82,9 @@ def get_data_flow(data):
         f"User input language: LITHUANIAN. RESPONSE LANGUAGE: ENGLISH. Based on user prefered cuisine: {data[3]}, return 2 keywords that define this cuisine. First of them must be name of cuisine and second one must be most popular dish of this cuisine. Do not include any other information")
     query += "Restaurant cuisine: " + response
     print(response)
-    # response = get_openai_response(
-    #     f"User input language: LITHUANIAN. RESPONSE LANGUAGE: ENGLISH. User defined additional requirements: {data[4]}. If user expressed some additional requirements, extract 1 keyword from it. If not, return empty string.")
-    # query += "About: " + response
+    response = get_openai_response(
+        f"User input language: LITHUANIAN. RESPONSE LANGUAGE: ENGLISH. User defined additional requirements: {data[4]}. If user expressed some additional requirements, extract 1 keyword from it. If not, return empty string.")
+    query += "About: " + response
     print(query)
     result = get_most_similar_vector_id(query)
 

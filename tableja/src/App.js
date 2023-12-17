@@ -50,13 +50,15 @@ function App() {
   };
 
   const sendMessageToBot = async (message, userInput) => {
+    let reqData = [...requiredData, userInput];
+
     try {
       const response = await fetch(`${config.API_ENDPOINT}/api/chatbot`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ message: requiredData }),
+        body: JSON.stringify({ message: reqData }),
       });
   
       const data = await response.json();
@@ -115,6 +117,8 @@ function App() {
 
   const handleUserInput = (e) => {
     setUserInput(e.target.value);
+
+    console.log(requiredData)
   };
   
   const handleSendMessage = () => {
@@ -125,7 +129,8 @@ function App() {
       { text: userInput, sender: 'user' },
     ]);
   
-    setRequiredData(prevData => [...prevData, userInput]);
+    const updatedRequiredData = [...requiredData, userInput];
+    setRequiredData(updatedRequiredData);
   
     setUserInput('');
   
