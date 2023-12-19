@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import config from './config';
+import uuid4 from 'uuid';
 
 function App() {
   const [userInput, setUserInput] = useState('');
@@ -11,6 +12,12 @@ function App() {
 
   const itemsPerPage = 5;  // Adjust as needed
   const visitedPerPage = 5; // Currently not used but declared for future use
+  
+  // Example of storing user ID in session storage (frontend)
+  if (!sessionStorage.getItem('userID')) {
+    sessionStorage.setItem('userID', (uuid4()).toString());
+  }
+  let userID = sessionStorage.getItem('userID');
 
   useEffect(() => {
     fetchRecommendedRestaurants();
@@ -42,28 +49,39 @@ function App() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ message }),
+        body: JSON.stringify({ message, userID }),
       });
 
       const data = await response.json();
-      const id1 = data.id.toString();
-      fetchRestaurantDetails(id1);
-      
-      const description = data.reply[1].description;
-      const address = data.reply[1].address;
-      const restaurantName = data.reply[1].name;
+      if (data.marker != "recommendation") {
+        setChatMessages([
+          ...chatMessages,
+          { text: message, sender: 'user' },
+          { text: data.reply, sender: 'bot' },
+        ]);
+        return;
+      }
 
-      const botReplyDescription = `Aprašymas: ${description}`;
-      const botReplyAddress = `Adresas: ${address}`;
-      const botReplyRestaurantName = `Restorano pavadinimas: ${restaurantName}`;
+      else {
+        const id1 = data.id.toString();
+        fetchRestaurantDetails(id1);
+        
+        const description = data.reply[1].description;
+        const address = data.reply[1].address;
+        const restaurantName = data.reply[1].name;
 
-      setChatMessages([
-        ...chatMessages,
-        { text: message, sender: 'user' },
-        { text: botReplyDescription, sender: 'bot' },
-        { text: botReplyAddress, sender: 'bot' },
-        { text: botReplyRestaurantName, sender: 'bot' },
-      ]);
+        const botReplyDescription = `Aprašymas: ${description}`;
+        const botReplyAddress = `Adresas: ${address}`;
+        const botReplyRestaurantName = `Restorano pavadinimas: ${restaurantName}`;
+
+        setChatMessages([
+          ...chatMessages,
+          { text: message, sender: 'user' },
+          { text: botReplyDescription, sender: 'bot' },
+          { text: botReplyAddress, sender: 'bot' },
+          { text: botReplyRestaurantName, sender: 'bot' },
+        ]);
+      }
     } catch (error) {
       console.error('Error sending message to bot:', error);
       setChatMessages([

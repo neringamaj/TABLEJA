@@ -16,6 +16,16 @@ def get_embedding(text, model="text-embedding-ada-002"):
    text = text.replace("\n", " ")
    return client.embeddings.create(input = [text], model=model).data[0].embedding
 
+def get_coordinates(address):
+    url = f"https://maps.googleapis.com/maps/api/geocode/json?address={address}&key={api_key}"
+    response = requests.get(url).json()
+    if response['status'] == 'OK':
+        latitude = response['results'][0]['geometry']['location']['lat']
+        longitude = response['results'][0]['geometry']['location']['lng']
+        return  f"{latitude}, {longitude}"
+    else:
+        return None
+
 def get_restaurants(api_key, location, radius):
     endpoint_url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json"
     params = {
@@ -28,6 +38,7 @@ def get_restaurants(api_key, location, radius):
     results = []
     if res.status_code == 200:
         restaurants = res.json()['results']
+        print(restaurants)
         for restaurant in restaurants:
             place_id = restaurant.get("place_id")
             details = get_place_details(api_key, place_id) if place_id else {}
@@ -49,6 +60,8 @@ def get_restaurants(api_key, location, radius):
                 query = f"Restaurant name: {restaurant_info['Name']}\nRestaurant address: {restaurant_info['Address']}\nRestaurant rating: {restaurant_info['Rating']}\nRestaurant price level: {restaurant_info['Price Level']}\n Restaurant cuisine: {restaurant_info['Cuisine']}\n Restaurant about: {restaurant_info['About']}\n"
                 upload_restaurant(get_embedding(query), str(unique_id), restaurant_info['Name'], restaurant_info['Address'], restaurant_info['Rating'], restaurant_info['About'], restaurant_info['Cuisine'], restaurant_info['Price Level'])
                 insert_restaurant(unique_id, restaurant_info['Name'], restaurant_info['Photo'])
+    print(results)
+
     return results
 
 def get_place_details(api_key, place_id):
@@ -91,13 +104,29 @@ def get_photo_url(api_key, photo_reference):
         return f"https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={photo_reference}&key={api_key}"
     return 'No photo available'
 
+def fetch_data_from_google_maps_api(loc):
+    location = get_coordinates(loc)
+    print(location)
+    radius = 1000  
 
-location = '54.89701840237929, 23.92111125040316' 
-radius = 1000  
+    restaurants = get_restaurants(api_key, location, radius)
 
-restaurants = get_restaurants(api_key, location, radius)
+    with open('restaurants_info.txt', 'w', encoding='utf-8') as file:
+        for restaurant in restaurants:
+            for key, value in restaurant.items():
+                file.write(f"{key}: {value}\n")
+            file.write("\n----------------------\n")
 
-with open('restaurants_info.txt', 'w', encoding='utf-8') as file:
+    print("Data written to restaurants_info.txt")
+
+    with open('restaurants_info.json', 'w', encoding='utf-8') as json_file:
+        json.dump(restaurants, json_file, indent=4, ensure_ascii=False)
+
+    print("Data written to restaurants_info.json") 
+
+    return True
+
+""" with open('restaurants_info.txt', 'w', encoding='utf-8') as file:
     for restaurant in restaurants:
         for key, value in restaurant.items():
             file.write(f"{key}: {value}\n")
@@ -108,4 +137,4 @@ print("Data written to restaurants_info.txt")
 with open('restaurants_info.json', 'w', encoding='utf-8') as json_file:
     json.dump(restaurants, json_file, indent=4, ensure_ascii=False)
 
-print("Data written to restaurants_info.json")
+print("Data written to restaurants_info.json") """
