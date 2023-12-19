@@ -109,32 +109,6 @@ def fetch_data_from_google_maps_api(loc):
     print(location)
     radius = 1000  
 
-    restaurants = get_restaurants(api_key, location, radius)
-
-    with open('restaurants_info.txt', 'w', encoding='utf-8') as file:
-        for restaurant in restaurants:
-            for key, value in restaurant.items():
-                file.write(f"{key}: {value}\n")
-            file.write("\n----------------------\n")
-
-    print("Data written to restaurants_info.txt")
-
-    with open('restaurants_info.json', 'w', encoding='utf-8') as json_file:
-        json.dump(restaurants, json_file, indent=4, ensure_ascii=False)
-
-    print("Data written to restaurants_info.json") 
+    get_restaurants(api_key, location, radius)
 
     return True
-
-""" with open('restaurants_info.txt', 'w', encoding='utf-8') as file:
-    for restaurant in restaurants:
-        for key, value in restaurant.items():
-            file.write(f"{key}: {value}\n")
-        file.write("\n----------------------\n")
-
-print("Data written to restaurants_info.txt")
-
-with open('restaurants_info.json', 'w', encoding='utf-8') as json_file:
-    json.dump(restaurants, json_file, indent=4, ensure_ascii=False)
-
-print("Data written to restaurants_info.json") """

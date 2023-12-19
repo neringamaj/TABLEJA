@@ -32,13 +32,6 @@ def chatbot_response():
 
     return jsonify({"marker": result[0], "reply": result[3], "id": result[1]})
 
-    """ if result[0] == "recommendation":
-        return jsonify({"reply": result[3], "id": result[1]})
-
-    return jsonify({"reply": result[3]})
- """
-    #return jsonify({"reply": result[3], "id": result[0][1]})
-
 @app.route('/api/restaurants/<string:restaurant_id>', methods=['GET'])
 def get_restaurant_details(restaurant_id):
     try:

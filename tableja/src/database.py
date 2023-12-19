@@ -118,7 +118,6 @@ def is_location_not_in_database(city_name: str) -> bool:
         return False """
    return False
 
-# Initialize Quadrant Database Connection
 users_collection = client.get_collection('users')
 
 def update_user_preferences(user_id, preferences):

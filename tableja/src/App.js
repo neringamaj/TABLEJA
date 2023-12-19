@@ -13,7 +13,6 @@ function App() {
   const itemsPerPage = 5;  // Adjust as needed
   const visitedPerPage = 5; // Currently not used but declared for future use
   
-  // Example of storing user ID in session storage (frontend)
   if (!sessionStorage.getItem('userID')) {
     sessionStorage.setItem('userID', (uuid4()).toString());
   }
