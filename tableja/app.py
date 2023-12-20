@@ -2,9 +2,12 @@ from flask import Flask, jsonify, request, abort, render_template
 from flask_cors import CORS
 from src.database import get_most_similar_vector_id
 from src.postgre import get_restaurant
+from bot import chat_with_bot
 import subprocess
 import hmac
 import os
+from uuid import uuid4
+
 
 app = Flask(__name__)
 CORS(app)
@@ -24,9 +27,10 @@ def update_webhook():
 @app.route('/api/chatbot', methods=['POST'])
 def chatbot_response():
     user_message = request.json.get('message', '')
-    result = get_most_similar_vector_id(user_message)
+    id = request.json.get('userID', '')
+    result = chat_with_bot(user_message, id)
 
-    return jsonify({"reply": result[3], "id": result[0][1]})
+    return jsonify({"marker": result[0], "reply": result[3], "id": result[1]})
 
 @app.route('/api/restaurants/<string:restaurant_id>', methods=['GET'])
 def get_restaurant_details(restaurant_id):

@@ -37,9 +37,6 @@ def get_restaurant(id):
             connection.close()
     return restaurant
     
-
-    
-    
 def insert_restaurant(id, title, img_url):
     new_restaurant = {
         'id': id,

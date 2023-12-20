@@ -1,220 +1,220 @@
-Name: Best Baltic Kaunas
-Address: A. Mickevičiaus gatvė 28, Kaunas
-Rating: 4.2
-Price Level: None
-Photo: https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=AWU5eFhQk_1Lhk67wboNnCVkFLL9-ulzE10m5_gutAIzp7iKg559t3jz1GQ7Jtc4yNPEGNv6zMC7WVdjDA4i24boWiJFsNa30dFmzrNEceUlkID2NFBJ4cRVbSLpyCTF1CpzptEoqdhQx92z7CQbQH9HYjvDHM_GX8FtYipoxcCL3IfIox2_&key=AIzaSyCNs0uO0Vd1he6zA-vCi2Cc6ymMvgGgkiU
-Website: No website available
-About: Wheelchair accessible entrance
-Working Hours: Working Hours: Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours
-Cuisine: restaurant
-
-----------------------
-Name: Kaunas Hotel
-Address: Laisvės alėja 79, Kaunas
+Name: Senas Namas
+Address: Užuolankos gatvė 24, Alytus
 Rating: 4.4
 Price Level: None
-Photo: https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=AWU5eFhtOpOOr3OSS3d7uXNj_BC6NHioYm-c0jhZV3shlmChhO0a_rdQUTDVNFfZVhAzaWFIsUTkmzHA1lG6YMGwNjw4gr0IL3UDShsZ3nAQEhkD-xz7nqM4hKnBaeyvL7wB8hbspaVyb0c1MpPkHbqbNlfFhGi5gCK0QlcMFcVXZRh6KGm1&key=AIzaSyCNs0uO0Vd1he6zA-vCi2Cc6ymMvgGgkiU
-Website: http://www.kaunashotel.lt/
-About: Wheelchair accessible entrance
-Working Hours: Working Hours: Monday: Open 24 hours, Tuesday: Open 24 hours, Wednesday: Open 24 hours, Thursday: Open 24 hours, Friday: Open 24 hours, Saturday: Open 24 hours, Sunday: Open 24 hours
-Cuisine: restaurant
-
-----------------------
-Name: Žalgirio arena
-Address: Karaliaus Mindaugo Prospektas 50, Kaunas
-Rating: 4.7
-Price Level: None
-Photo: https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=AWU5eFjwa-ezSbv6gnpytlmaWUlSe1zFxJoyZ0JukS2UumN3waMw8FZ4eSbLIes5_yiUK1Nycf_4sHKzStH8O2kIm1PHYqxsGJVVbXUkK5UH_7poqXFmf_HdgeIKiNVwaZKo479QYM-dkSMN-ULtXxKJtl1jKmOqx6stXQYS5GGsSkSEBidj&key=AIzaSyCNs0uO0Vd1he6zA-vCi2Cc6ymMvgGgkiU
-Website: http://zalgirioarena.lt/
+Photo: https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=AWU5eFjF8y7nktsTKQVoArGtFzKC-v47JHkDb-fOAsx_TzhrHlSSeEgMw_dP6F3m75ViSxIdfAXCc4r5pf44i0SiTaatCAw0_OPqtsFLj97UtWdCP8hUPzL8sI33VrsVxqcApURpDleGjQvu2-VH56qOdlcGFkLp7Hfvo4LMNhXjAUs44peK&key=AIzaSyCNs0uO0Vd1he6zA-vCi2Cc6ymMvgGgkiU
+Website: http://www.senasnamas.lt/
 About: Wheelchair accessible entrance
 Working Hours: Working Hours: Not available
 Cuisine: restaurant
 
 ----------------------
-Name: Piccola Italia - neapolitan pizzeria
-Address: Maironio gatvė 22, Kaunas
-Rating: 4.5
+Name: Carpe diem
+Address: Rotušės aikštė 16, Alytus
+Rating: 4.3
 Price Level: 2
-Photo: https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=AWU5eFg8eUeIkATzO5VA-eNZDjZ34I6GS-uL9QM62bDU2pgSv_0eCG3i9tJ7i_e3n1nld3IBGDvjnRJKxO7rcR8m1wyGCKQF4j1X7vrqr0oLh_4QkruM4gNpfPrnyZr8TuPK9-r_4i1ffrcZFn2JDf-d7OR-ZUUzYZD-2Ims3fFoLS5agkVb&key=AIzaSyCNs0uO0Vd1he6zA-vCi2Cc6ymMvgGgkiU
-Website: http://www.piccolaitalia.lt/
-About: Delivery | Dine in | Reservable | Serves beer | Serves brunch | Serves dinner | Serves lunch | Serves vegetarian food | Serves wine | Takeout
-Working Hours: Working Hours: Monday: Closed, Tuesday: 12:00 – 10:00 PM, Wednesday: 12:00 – 10:00 PM, Thursday: 12:00 – 10:00 PM, Friday: 12:00 – 11:00 PM, Saturday: 1:00 – 11:00 PM, Sunday: 1:00 – 8:00 PM
-Cuisine: restaurant
-
-----------------------
-Name: „Bella Italia“
-Address: S. Daukanto gatvė 14, Kaunas
-Rating: 4.4
-Price Level: 2
-Photo: https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=AWU5eFjvWPnk20eGH3IzfNkjLBbYQLvz2HJcjKAQcmwQkzEdJQWe9viBVvYR-Ds4LcEDhhmlenqAKjZw5k3mZGuJ2P85bzAqezB0ncaZ494mvn5gIkDwFXNZXSJA2_PmDvmHD5zqfidNFGTiy07EGQ5EgRvpaeWg_9iBgbVnVStyJGWkIzlc&key=AIzaSyCNs0uO0Vd1he6zA-vCi2Cc6ymMvgGgkiU
-Website: http://www.pasromanopaolo.lt/
+Photo: https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=AWU5eFj4Tdj-meMRK7Ov0cGeejjPbRQOAzcx7YoKVmGcdIPg9EFqrBs3sMhJbudFPVGek48NeKcOEJPKDEl9L_VPBvFjk8MV1teZ7ye4KLNTJKCPpQO8Yb7PLPndTvqHrEk0Jd4tdoOMsFz_Gr9gEJY6N6heUJQZUeSJe33Ph6hjnqWFycrV&key=AIzaSyCNs0uO0Vd1he6zA-vCi2Cc6ymMvgGgkiU
+Website: No website available
 About: Delivery | Dine in | Reservable | Serves beer | Serves breakfast | Serves brunch | Serves dinner | Serves lunch | Serves vegetarian food | Serves wine | Takeout | Wheelchair accessible entrance
-Working Hours: Working Hours: Monday: 11:00 AM – 11:00 PM, Tuesday: 11:00 AM – 11:00 PM, Wednesday: 11:00 AM – 11:00 PM, Thursday: 11:00 AM – 11:00 PM, Friday: 11:00 AM – 12:00 AM, Saturday: 11:00 AM – 12:00 AM, Sunday: 11:00 AM – 11:00 PM
+Working Hours: Working Hours: Monday: 9:00 AM – 10:00 PM, Tuesday: 9:00 AM – 10:00 PM, Wednesday: 9:00 AM – 10:00 PM, Thursday: 9:00 AM – 10:00 PM, Friday: 9:00 AM – 11:00 PM, Saturday: 10:00 AM – 11:00 PM, Sunday: 10:00 AM – 9:00 PM
 Cuisine: restaurant
 
 ----------------------
-Name: Moksha
-Address: Vasario 16-osios gatvė 6-1, Kaunas
-Rating: 4.8
-Price Level: None
-Photo: https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=AWU5eFibY4DBfXvUZOnQS658f-PV-fUXe2ZavyMi2rKTSOYV46GVh0QjO4iIMN0L3CKdIeib0Ixuq9rLm9AbUmarL_I0z25HOGORAYO3RyFTlpPSbNMBfWFQWKEwM6VGkwdkbIF1vZiDEwf9fu8QsTemrm4Qa5B67bqWO9K7PQlrE1bz0gc6&key=AIzaSyCNs0uO0Vd1he6zA-vCi2Cc6ymMvgGgkiU
-Website: http://www.moksha.lt/
-About: Delivery | Dine in | Reservable | Serves beer | Serves dinner | Serves lunch | Serves vegetarian food | Serves wine | Takeout
-Working Hours: Working Hours: Monday: Closed, Tuesday: 11:00 AM – 3:00 PM, Wednesday: 11:00 AM – 3:00 PM, Thursday: 11:00 AM – 3:00 PM, Friday: 11:00 AM – 8:00 PM, Saturday: 12:00 – 8:00 PM, Sunday: Closed
-Cuisine: restaurant
-
-----------------------
-Name: Radharanė
-Address: Laisvės alėja 40, Kaunas
-Rating: 4.5
-Price Level: 2
-Photo: https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=AWU5eFgEXQywaEURPO6IvRoDB1cTLagZLxh54nUJFcXnqJYvg5gwsN-tcKEsWqZMCE2LifrBrsCxad0zpBu7_ndjdfnDBLrU5V7dAprYI1OTpTxKBk-vKVrqyskuK13tJCYQ-bDmVSZtVRaC8miD5nkrPFD3AdZZQ6sEeDUEkb-jGN_jittm&key=AIzaSyCNs0uO0Vd1he6zA-vCi2Cc6ymMvgGgkiU
-Website: http://www.radharane.lt/
-About: Dine in | Reservable | Serves breakfast | Serves brunch | Serves dinner | Serves lunch | Serves vegetarian food | Takeout | Wheelchair accessible entrance
-Working Hours: Working Hours: Monday: 11:00 AM – 8:00 PM, Tuesday: 11:00 AM – 8:00 PM, Wednesday: 11:00 AM – 8:00 PM, Thursday: 11:00 AM – 8:00 PM, Friday: 11:00 AM – 8:00 PM, Saturday: 11:00 AM – 8:00 PM, Sunday: 11:00 AM – 8:00 PM
-Cuisine: restaurant
-
-----------------------
-Name: Hesburger
-Address: Laisvės alėja 48, Kaunas
-Rating: 4.1
+Name: Principai kavinė-baras (lauko terasa)
+Address: Vilniaus gatvė 6, Alytus
+Rating: 3.7
 Price Level: 1
-Photo: https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=AWU5eFj6nxQ2EIFksRMW3pHocOw5YRLf4EbtjmbkPn2Kj_bhsLPX0ZZHTNcYN1dp33xn75FSpZejam1-b4-841ZwBFyusWH9-8aM7WNtiuwoUQf_HqGb8BIi6cqXyX6RFoxI9aavmfPkun-g5PjYDUa3tH51GjJBzYIWKYKcAR3SVkssjlai&key=AIzaSyCNs0uO0Vd1he6zA-vCi2Cc6ymMvgGgkiU
-Website: http://www.hesburger.lt/
-About: Delivery | Dine in | Serves breakfast | Serves dinner | Serves lunch | Serves vegetarian food | Takeout | Wheelchair accessible entrance
-Working Hours: Working Hours: Monday: 10:00 AM – 10:00 PM, Tuesday: 10:00 AM – 10:00 PM, Wednesday: 10:00 AM – 10:00 PM, Thursday: 10:00 AM – 10:00 PM, Friday: 10:00 AM – 10:00 PM, Saturday: 10:00 AM – 10:00 PM, Sunday: 11:00 AM – 10:00 PM
+Photo: https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=AWU5eFj96HSvqzuvlbQT3BogPqTwtQ8ulQrq5XXpXLw-pd_AoFMA6PuIuWEbdboKN30awJ5lKujk9ImTGhP_jE9vHqR9LAb6IfP-lSOE1U1opubKltagLc19qfdV_k13iZ16TJvCgQVrDv4qhQSamvZYvBnU1kzhWHUOnTftisk_hiuxtPOh&key=AIzaSyCNs0uO0Vd1he6zA-vCi2Cc6ymMvgGgkiU
+Website: No website available
+About: Delivery | Dine in | Reservable | Serves beer | Serves brunch | Serves dinner | Serves lunch | Serves vegetarian food | Serves wine | Takeout | Wheelchair accessible entrance
+Working Hours: Working Hours: Monday: 11:00 AM – 11:00 PM, Tuesday: 11:00 AM – 11:00 PM, Wednesday: 11:00 AM – 11:00 PM, Thursday: 11:00 AM – 11:00 PM, Friday: 11:00 AM – 12:00 AM, Saturday: 11:00 AM – 12:00 AM, Sunday: Closed
 Cuisine: restaurant
 
 ----------------------
-Name: Kultura!
-Address: K. Donelaičio gatvė 16, Kaunas
-Rating: 4.6
-Price Level: 2
-Photo: https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=AWU5eFhcN1HMdDJTgsgWjo3t6aqEYmQgPZj_F2RmgpsOe2_OgAI-QBoMSfrNkKEHcWZHNsf2iLr1skAFJn9Q3BcgoCIwsHenmh3g137bipmwKx9tCeQTcjq6HmB3TNKWnuUHu7pe7iSgR_w0ILL80h95bpHfYI29swWCThLlfW2jRMH3LSH7&key=AIzaSyCNs0uO0Vd1he6zA-vCi2Cc6ymMvgGgkiU
-Website: https://m.facebook.com/kauno.kultura/
-About: Dine in | Reservable | Serves beer | Serves wine | Takeout
-Working Hours: Working Hours: Monday: 12:00 – 10:00 PM, Tuesday: 12:00 PM – 12:00 AM, Wednesday: 12:00 PM – 12:00 AM, Thursday: 12:00 PM – 2:00 AM, Friday: 12:00 PM – 2:00 AM, Saturday: 12:00 PM – 2:00 AM, Sunday: 12:00 – 6:00 PM
+Name: Bistro Food
+Address: Naujoji gatvė 2B, Alytus
+Rating: 4.1
+Price Level: None
+Photo: https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=AWU5eFh1SvRtNGf2X1bZnWtom1Wii-tB7ecilvtWYMa5TIkrHns9UPGWswgfF6afsV6qnJO_vXZ0EXwNaJWS6YQKRf0jexO6Rci62UeWnhqgbQSAANDr1H0u0IOIrD0LMS17AhivPG-JUjbaRz6FyyOigZRq8swEl7MzcxUcAbW8ud20XRHY&key=AIzaSyCNs0uO0Vd1he6zA-vCi2Cc6ymMvgGgkiU
+Website: http://bistropica.lt/
+About: Delivery | Dine in | Serves beer | Serves breakfast | Serves dinner | Serves lunch | Takeout
+Working Hours: Working Hours: Monday: 10:00 AM – 9:00 PM, Tuesday: 10:00 AM – 9:00 PM, Wednesday: 10:00 AM – 9:00 PM, Thursday: 10:00 AM – 9:00 PM, Friday: 10:00 AM – 10:00 PM, Saturday: 10:00 AM – 10:00 PM, Sunday: 10:00 AM – 9:00 PM
 Cuisine: restaurant
 
 ----------------------
-Name: Bernelių užeiga Smuklė
-Address: K. Donelaičio gatvė 11, Kaunas
+Name: Altreva cafe
+Address: Alytus
+Rating: 4.1
+Price Level: None
+Photo: https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=AWU5eFi5xq60LmCgnwLgKUPlXfkj40jkGgUZtNvf-d2YCvD4X5N-UAvJM5_osXd_7IGuU2jh7sZyqBxACuOmALBed_HuSKW7zuaP6biY5nWThtkwAipJrRewYHXSsjEPCnWzHjp8gQ_R4W2POQahyDcQzLJzM1Fc1T0P09NGXTib2ZtyIT4k&key=AIzaSyCNs0uO0Vd1he6zA-vCi2Cc6ymMvgGgkiU
+Website: No website available
+About: Dine in | Reservable | Serves beer | Serves breakfast | Serves lunch | Serves wine | Takeout
+Working Hours: Working Hours: Monday: 11:00 AM – 9:00 PM, Tuesday: 11:00 AM – 9:00 PM, Wednesday: 11:00 AM – 9:00 PM, Thursday: 11:00 AM – 9:00 PM, Friday: 11:00 AM – 9:00 PM, Saturday: 11:00 AM – 9:00 PM, Sunday: 11:00 AM – 9:00 PM
+Cuisine: restaurant
+
+----------------------
+Name: Klevelis Gastropub
+Address: Jotvingių gatvė 4, Alytus
+Rating: 4.2
+Price Level: None
+Photo: https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=AWU5eFj7o-cxgJW-GqfCf8VcuFJfIRA6T6jGVUjTiv9XIreW0We3IiqH7r2OGkE9x0271B8et-hJp-8QIGk5RF1vZEfOMDuLIN2PxLn00SpEeVQqIab4dhTrqR0JSR6CTiIlO0kF-RH7wn9pswGu5UEvewKWZfmJXcE-0JLO1xE718wFCK80&key=AIzaSyCNs0uO0Vd1he6zA-vCi2Cc6ymMvgGgkiU
+Website: No website available
+About: Reservable | Serves beer | Serves dinner | Takeout
+Working Hours: Working Hours: Not available
+Cuisine: restaurant
+
+----------------------
+Name: Kebabinė Alytus
+Address: Kebabai, Alytus
+Rating: 3.4
+Price Level: None
+Photo: https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=AWU5eFjDXzfnDFy2lzjfng7rE4KmSBQrberr_7eXtwsmFuWOyRi_qrqRONoY0lZJ8EiPkVvFNTgBT3L9UNN0FPEhcrYybBR5-JljvAPMXJKFe9lS6IutQyyDSogKs8oYSlKaTh94khGtq2C7klgrFVqHz10nLLwZMADS7iRQHDRL1RWIfdJw&key=AIzaSyCNs0uO0Vd1he6zA-vCi2Cc6ymMvgGgkiU
+Website: No website available
+About: Takeout
+Working Hours: Working Hours: Monday: 10:00 AM – 8:00 PM, Tuesday: 10:00 AM – 8:00 PM, Wednesday: 10:00 AM – 8:00 PM, Thursday: 10:00 AM – 8:00 PM, Friday: 10:00 AM – 8:00 PM, Saturday: 10:00 AM – 8:00 PM, Sunday: Closed
+Cuisine: restaurant
+
+----------------------
+Name: Kavinė "Druska pipirai"
+Address: Pulko gatvė 12a, Alytus
 Rating: 4.4
 Price Level: 2
-Photo: https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=AWU5eFiiLa9OCxeKKobQHrdbgu0Gm_k5mWad-7xysRaIfbCoXzd3pkeSr30XXf9yqDUQb0NPwFWEqNdQwdLrKGifjw_bWyUlpWgXQx1RLmwJD-PjwcSW4xr6jHsBTkaqsDxKv6bsYuEkYodboM06Qn_hFw9_ts3JFMUZQz-rQ6alU9iwt_4H&key=AIzaSyCNs0uO0Vd1he6zA-vCi2Cc6ymMvgGgkiU
-Website: http://www.berneliuuzeiga.lt/
-About: Delivery | Dine in | Reservable | Serves beer | Serves breakfast | Serves brunch | Serves dinner | Serves lunch | Serves wine | Takeout
-Working Hours: Working Hours: Monday: 11:00 AM – 10:00 PM, Tuesday: 11:00 AM – 10:00 PM, Wednesday: 11:00 AM – 10:00 PM, Thursday: 11:00 AM – 10:00 PM, Friday: 11:00 AM – 11:00 PM, Saturday: 11:00 AM – 11:00 PM, Sunday: 11:00 AM – 10:00 PM
+Photo: https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=AWU5eFgMH8CjCTxdaOYs6uk9DEfji8ILcjy3oJge0uAHYUhy9MVVFgP0NyjYAUTMzMkfqlTU2y_8Gc41pVxUzjibWBxDTrbYGI3vzHCwPzt1b8lC5dXlzUtsftOQvjFkBAU5ig88FjCSag73CrmkRnvv9PUUngwTjKOQn4B0UYL1iWDswLSa&key=AIzaSyCNs0uO0Vd1he6zA-vCi2Cc6ymMvgGgkiU
+Website: https://www.facebook.com/Druska-Pipirai-104765332117164
+About: Dine in | Reservable | Serves beer | Serves breakfast | Serves brunch | Serves dinner | Serves lunch | Serves vegetarian food | Serves wine | Takeout
+Working Hours: Working Hours: Monday: 10:00 AM – 9:00 PM, Tuesday: 10:00 AM – 10:00 PM, Wednesday: 10:00 AM – 10:00 PM, Thursday: 10:00 AM – 10:00 PM, Friday: 10:00 AM – 11:00 PM, Saturday: 11:00 AM – 11:00 PM, Sunday: 11:00 AM – 9:00 PM
 Cuisine: restaurant
 
 ----------------------
-Name: Alibi
-Address: Spaustuvininkų gatvė 7, Kaunas
-Rating: 3.5
+Name: Alanija Kebab
+Address: Pulko gatvė 24, Alytus
+Rating: 4.5
+Price Level: 2
+Photo: https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=AWU5eFgN8ZCeRlx4QRwuH3tnOz5hVAJZWPS_7Xx8y4rXHYy-XG5X7LiujScBSU6jNeQ87jMbT5fRCmnHCOog8GY1EH1mCcTfw2qcClRBxBX22IuE5o8X7c5HhgHWdh3ZROpmfYhFvIC4owMg-nHJHKikUY1uuDykAOEHvAKWpYvvUxB9mw3i&key=AIzaSyCNs0uO0Vd1he6zA-vCi2Cc6ymMvgGgkiU
+Website: No website available
+About: Delivery | Dine in | Reservable | Serves brunch | Serves lunch | Takeout
+Working Hours: Working Hours: Monday: 10:00 AM – 10:00 PM, Tuesday: 10:00 AM – 10:00 PM, Wednesday: 10:00 AM – 10:00 PM, Thursday: 10:00 AM – 10:00 PM, Friday: 10:00 AM – 11:00 PM, Saturday: 11:00 AM – 11:00 PM, Sunday: 11:00 AM – 10:00 PM
+Cuisine: restaurant
+
+----------------------
+Name: UAB "Virgaita"
+Address: Pulko gatvė 24, Alytus
+Rating: None
 Price Level: None
 Photo: No photo available
 Website: No website available
-About: Dine in | Serves beer | Serves wine | Takeout
-Working Hours: Working Hours: Monday: 11:00 AM – 6:00 PM, Tuesday: 11:00 AM – 6:00 PM, Wednesday: 11:00 AM – 6:00 PM, Thursday: 11:00 AM – 6:00 PM, Friday: Closed, Saturday: Closed, Sunday: Closed
+About: Curbside pickup | Serves dinner | Takeout
+Working Hours: Working Hours: Not available
 Cuisine: restaurant
 
 ----------------------
-Name: Casa Della Pasta
-Address: Laisvės alėja 27, Kaunas
-Rating: 4.4
+Name: Euro Pub Seklyčia
+Address: Rotušės aikštė 12A, Alytus
+Rating: 1
+Price Level: None
+Photo: https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=AWU5eFifCtouK9cBONCRk-eDhzbcWuY49Tp8xl_8zJwqmFc7nGaj_-qlJao-eFUMPpy_2BZwxCCuyLs12XuBADNEjrBiv4shKj0rW5WhS2XCuJWfrSud5aK-yWLRmbV-4ObhPq5kNCN-QugWBxgUvb4ufvIQsZd01ZtdoUrijXSiUGOCmDI&key=AIzaSyCNs0uO0Vd1he6zA-vCi2Cc6ymMvgGgkiU
+Website: No website available
+About: Delivery | Dine in | Reservable | Serves beer | Serves breakfast | Serves dinner | Serves lunch | Serves wine | Takeout | Wheelchair accessible entrance
+Working Hours: Working Hours: Not available
+Cuisine: restaurant
+
+----------------------
+Name: Lisushi
+Address: S. Dariaus ir S. Girėno gatvė 7, Alytus
+Rating: 4.6
 Price Level: 2
-Photo: https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=AWU5eFgIWwbnO4zVybyyEPsGMBGZFREJeVkagTKL3gZ-SylFCIp8ARJrWyIxMKhAmiGFWdvoZJ5BC8xT2DUg3E5WxIgqg44IN1yN_aAj2DUyP3_EsLcTU6qtqkd_T1Jv0pdVFJQzythE_MgIdqGc7gipH43Kihl_D8y7AKbwINJXRba-tP8&key=AIzaSyCNs0uO0Vd1he6zA-vCi2Cc6ymMvgGgkiU
-Website: http://casadellapasta.lt/
-About: Dine in | Reservable | Serves beer | Serves breakfast | Serves brunch | Serves dinner | Serves lunch | Serves vegetarian food | Serves wine | Takeout | Wheelchair accessible entrance
-Working Hours: Working Hours: Monday: 11:00 AM – 11:00 PM, Tuesday: 11:00 AM – 11:00 PM, Wednesday: 11:00 AM – 11:00 PM, Thursday: 11:00 AM – 11:00 PM, Friday: 11:00 AM – 12:00 AM, Saturday: 11:00 AM – 12:00 AM, Sunday: 11:00 AM – 11:00 PM
+Photo: https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=AWU5eFhX0Xa_Dx29VFNNfShIz28F4aLJR9B42gKZu3OEjN2bmkphR4jPlAaHfRFn4OZnWUoDY8WysdNDS4en7fwyFmFPOV2EwB6Uwb53EKMnlXbfYvK_godoRQk-HD_5cf2Ffm9bEOLHcb99wLRUruPyf59Vn6tdRuVrAEY0--zIsHr9-_tm&key=AIzaSyCNs0uO0Vd1he6zA-vCi2Cc6ymMvgGgkiU
+Website: https://www.facebook.com/Lisusis/
+About: Delivery | Dine in | Reservable | Serves dinner | Serves lunch | Takeout | Wheelchair accessible entrance
+Working Hours: Working Hours: Monday: 11:00 AM – 10:00 PM, Tuesday: 11:00 AM – 10:00 PM, Wednesday: 11:00 AM – 10:00 PM, Thursday: 11:00 AM – 10:00 PM, Friday: 11:00 AM – 10:00 PM, Saturday: 11:00 AM – 10:00 PM, Sunday: 11:00 AM – 10:00 PM
 Cuisine: restaurant
 
 ----------------------
-Name: Ali šokoladinė
-Address: Laisvės alėja 41, Kaunas
+Name: Happy Pizza
+Address: Vilniaus gatvė 5, Alytus
+Rating: 4.1
+Price Level: None
+Photo: https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=AWU5eFj9oF8gC3pqS1aG_6Ad1N94qH2lN7T5lGWp_dda0SeFTvBCAPGNcbN87U3GnifwQPY3kbCyrZhtuMXbf6D9Uebj2RMa7aDaLCZ0yThiOsx43zLyJfjomnrWwwn8-jNaP2uir9_KKod9pp1pq0ukk6WuZyqla9Levp7JETY98GQxNxft&key=AIzaSyCNs0uO0Vd1he6zA-vCi2Cc6ymMvgGgkiU
+Website: No website available
+About: Delivery | Dine in | Takeout
+Working Hours: Working Hours: Monday: 10:00 AM – 10:00 PM, Tuesday: 10:00 AM – 10:00 PM, Wednesday: 10:00 AM – 10:00 PM, Thursday: 10:00 AM – 10:00 PM, Friday: 10:00 AM – 10:00 PM, Saturday: 10:00 AM – 10:00 PM, Sunday: 10:00 AM – 10:00 PM
+Cuisine: restaurant
+
+----------------------
+Name: Restoranas "Vaidila"
+Address: Rotušės aikštė 12, Alytus
+Rating: 4.4
+Price Level: None
+Photo: https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=AWU5eFgqpZsGLzz1TrCqRJw276TpZ0NQokIb9m9htxPIdLiBXXfQxC7CfpFeuQsCU88ZBlqPXQp7Gltw6BbUz-n82zYm2VV9FQj3VFnrKs-Y2I2hSp10_SGSOozyYp_blWArF3k5FhoEiXZdL53Qq9WiM3pZbHydGmCq7WKWEVIUXFhU4bLr&key=AIzaSyCNs0uO0Vd1he6zA-vCi2Cc6ymMvgGgkiU
+Website: http://www.vaidila.lt/
+About: Dine in | Reservable | Serves beer | Serves breakfast | Serves dinner | Serves lunch | Serves wine | Takeout
+Working Hours: Working Hours: Monday: 8:00 AM – 11:00 PM, Tuesday: 8:00 AM – 11:00 PM, Wednesday: 8:00 AM – 11:00 PM, Thursday: 8:00 AM – 11:00 PM, Friday: 8:00 AM – 11:00 PM, Saturday: 8:00 AM – 11:00 PM, Sunday: 8:00 AM – 11:00 PM
+Cuisine: restaurant
+
+----------------------
+Name: Zymora
+Address: Rotušės aikštė 12, Alytus
+Rating: 5
+Price Level: None
+Photo: No photo available
+Website: No website available
+About: Dine in | Serves dinner | Takeout
+Working Hours: Working Hours: Monday: 11:00 AM – 9:00 PM, Tuesday: 11:00 AM – 9:00 PM, Wednesday: 11:00 AM – 9:00 PM, Thursday: 11:00 AM – 9:00 PM, Friday: 11:00 AM – 9:00 PM, Saturday: 11:00 AM – 9:00 PM, Sunday: 11:00 AM – 9:00 PM
+Cuisine: restaurant
+
+----------------------
+Name: PIZZA TRUCK
+Address: Sporto gatvė 2, Alytus
+Rating: 4.1
+Price Level: None
+Photo: https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=AWU5eFhv_IsBWhRIRU7A2rp9ys6zVDcspp_mP51JWyi8po96hvV3vNIN9usOg62Uk5rONyLVBk5sabe_I8Jv6Tq1kgtm6FdVVrmGB6CWAruRrNHh8kOdG7MhLi98GihXJ7cC46OiOoQlDUzS56dt6GULsSNabev-q-4BcMtF4KbMysbn9o0I&key=AIzaSyCNs0uO0Vd1he6zA-vCi2Cc6ymMvgGgkiU
+Website: No website available
+About: Serves dinner | Takeout
+Working Hours: Working Hours: Not available
+Cuisine: restaurant
+
+----------------------
+Name: Čeburekinė
+Address: Vilniaus gatvė 13, Alytus
 Rating: 4.7
 Price Level: None
-Photo: https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=AWU5eFjzgvAphZM2MN4FaRpo1DVLA-v66UXmN8-2stRLLnbL7shLQsOfUWplJubGPPH_gn4hkX5pPReOjrV0DvYxZxPJ5YMlyEjzPSdQYRHOnz_LvzpcOYKypz-C1EJ5eS2zy4xNbCu4lNZ1CUNMa-FwpOSr3gCz415jJa9PUJvxOz_Y4HZK&key=AIzaSyCNs0uO0Vd1he6zA-vCi2Cc6ymMvgGgkiU
-Website: http://www.alisokoladine.lt/
-About: Dine in | Takeout | Wheelchair accessible entrance
-Working Hours: Working Hours: Monday: 10:00 AM – 9:00 PM, Tuesday: 10:00 AM – 9:00 PM, Wednesday: 10:00 AM – 9:00 PM, Thursday: 10:00 AM – 9:00 PM, Friday: 10:00 AM – 9:00 PM, Saturday: 10:00 AM – 9:00 PM, Sunday: 10:00 AM – 9:00 PM
+Photo: https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=AWU5eFiX6hnyeBQyiHOfy4VLrAUfxxmN0jNfudDA0yZ8wK_RcSMTIMq9g3qfUwBUyV4Nd-Ba2Ifnw_UE322CHO575L4LxkGIOHi78WTDqZPkQ4vlBcLhtVcfW8C8Bz9X6OJ0vORL17SakgMGfXfI23FmJl4NLbdu1rWs3LS6QR76ydrL_iw&key=AIzaSyCNs0uO0Vd1he6zA-vCi2Cc6ymMvgGgkiU
+Website: No website available
+About: Serves lunch | Takeout
+Working Hours: Working Hours: Monday: 10:00 AM – 7:00 PM, Tuesday: 10:00 AM – 7:00 PM, Wednesday: 10:00 AM – 7:00 PM, Thursday: 10:00 AM – 7:00 PM, Friday: 10:00 AM – 7:00 PM, Saturday: 10:00 AM – 4:00 PM, Sunday: Closed
 Cuisine: restaurant
 
 ----------------------
-Name: Vingiu Dubingiu Aludė
-Address: K. Donelaičio gatvė 41, Kaunas
-Rating: 4.8
+Name: Dzūkų alaus restoranas
+Address: Vilniaus gatvė 35, Alytus
+Rating: 4.6
 Price Level: 2
-Photo: https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=AWU5eFj6A_NT_h4ksyFFE6f9unOteFsUITtZmCo0PzvURnLKrs-zrxunki7bL5EVs_gLxQ8iihoiESQK54yOBQ8v4S99N23DqXdK8qW1D9h7FXEwqxMt_sCYDuvIHf9s35-jzPQkYYWYfkUSCJrD2VPNpibHTimQtBHFyW2Jw--4L6kZh5rb&key=AIzaSyCNs0uO0Vd1he6zA-vCi2Cc6ymMvgGgkiU
-Website: http://www.vingiudubingiu.lt/
-About: Dine in | Serves beer | Serves wine | Takeout
-Working Hours: Working Hours: Monday: 4:00 PM – 1:00 AM, Tuesday: 4:00 PM – 1:00 AM, Wednesday: 4:00 PM – 1:00 AM, Thursday: 4:00 PM – 1:00 AM, Friday: 4:00 PM – 1:00 AM, Saturday: 4:00 PM – 1:00 AM, Sunday: Closed
-Cuisine: restaurant
-
-----------------------
-Name: American Pizza
-Address: Vytauto prospektas 60, Kaunas
-Rating: 4.2
-Price Level: 1
-Photo: https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=AWU5eFgZZjHpDyYJdFsQL00AGgsPEN3B-K-j5ixbUNyFreLwDMgW9m7_bYJX4I_6SyUML5Bcba0GSdfjeG6TAMqyCPFCL3g_ezlp8F7JILUYEoJdcWX11TI5X1NyTRxksn47272q4I6f3iZYqrXWRpYMfURhAm5uTKWLDlAErHuG8UD5XM79&key=AIzaSyCNs0uO0Vd1he6zA-vCi2Cc6ymMvgGgkiU
-Website: http://www.americanpizza.lt/
-About: Delivery | Dine in | Reservable | Serves dinner | Serves lunch | Takeout
-Working Hours: Working Hours: Monday: 11:00 AM – 11:00 PM, Tuesday: 11:00 AM – 11:00 PM, Wednesday: 11:00 AM – 11:00 PM, Thursday: 11:00 AM – 11:00 PM, Friday: 11:00 AM – 11:00 PM, Saturday: 11:00 AM – 11:00 PM, Sunday: 11:00 AM – 11:00 PM
-Cuisine: restaurant
-
-----------------------
-Name: Turkiški Skanėstai
-Address: Miško gatvė 19, Kaunas
-Rating: 4.7
-Price Level: 1
-Photo: https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=AWU5eFjxTiMgLbCML0_p2Le_kYdjdrbC-GWnBCCHmX25zakQ58UFzHUWR55MOI2xhflx7b_BpHu6FF0sUDrQ14_kNjpyfj32sFhFjcNHU2gbyNSXgXmhaU-XFdaRcjCtjEG3IIubZ5y4UfLvNygnRtdUTBwRybBprbtxRrFfcAl-inR1eV7s&key=AIzaSyCNs0uO0Vd1he6zA-vCi2Cc6ymMvgGgkiU
-Website: https://www.facebook.com/pg/turkiskiskanestai/
-About: Delivery | Dine in | Reservable | Serves brunch | Serves dinner | Serves lunch | Takeout
-Working Hours: Working Hours: Monday: 10:30 AM – 8:00 PM, Tuesday: 10:30 AM – 8:00 PM, Wednesday: 10:30 AM – 8:00 PM, Thursday: 10:30 AM – 8:00 PM, Friday: 10:30 AM – 8:00 PM, Saturday: 10:30 AM – 8:00 PM, Sunday: Closed
-Cuisine: restaurant
-
-----------------------
-Name: Charlie Pizza
-Address: Laisvės alėja 68, Kaunas
-Rating: 3.5
-Price Level: 2
-Photo: https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=AWU5eFhKy-NkF3tH4Tl8zqJ8BKwHPKjkCPwmAQtEkzb8p4J06-2Kt76K5Gw4Z9pfi-wMPyVxLi076Nn3OYnZz3VM1-gEmzAWSBnGGA5j5K6vkINRI9CQJKjMHZYccuIVUeFdZ3igHzs9iFg66kjhh-WcBhRt1_Rqw5gcdx-wAKwIUwDQ2h60&key=AIzaSyCNs0uO0Vd1he6zA-vCi2Cc6ymMvgGgkiU
-Website: http://www.charliepizza.lt/
-About: Delivery | Dine in | Reservable | Serves beer | Serves breakfast | Serves brunch | Serves dinner | Serves lunch | Serves vegetarian food | Serves wine | Takeout | Wheelchair accessible entrance
-Working Hours: Working Hours: Monday: 11:00 AM – 10:00 PM, Tuesday: Closed, Wednesday: 11:00 AM – 10:00 PM, Thursday: 11:00 AM – 12:00 AM, Friday: 11:00 AM – 1:00 AM, Saturday: 11:00 AM – 1:00 AM, Sunday: 11:00 AM – 10:00 PM
-Cuisine: restaurant
-
-----------------------
-Name: Višta puode
-Address: S. Daukanto gatvė 23, Kaunas
-Rating: 4.4
-Price Level: 2
-Photo: https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=AWU5eFh9TKuQ_Q28tL4gZakaqolFPuLqzn1BoyxhcHLVkuoZ0sQq15E1Rg-B3qXZvJsBxgaxQyPISJfTjbPUxpXIHX2UO0_2Bdr5BokhnkuuWtVho2GPKXdZaJODZ4ai2WkN651c30Bojxx7aP4HiTSgZQ8heTsfzxcfaK0I5PtPRh2DZwAK&key=AIzaSyCNs0uO0Vd1he6zA-vCi2Cc6ymMvgGgkiU
-Website: http://vištapuode.lt/
+Photo: https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=AWU5eFhXebRvB8bmeBHB8IPc3RBZuminsFGiHVAcxxqTHYHwtrNt5WiIo6hPbVVzQFRcymXgQ7F4UO3NCOLWZme5RH0g2J0MdFna_U2wD7zZ7T8mL-HFTo80AH2INnonm5imh6svYzJbo5X00bYp3QGKkQbxA4JKhyFn3S66Zls2ubq0hAeB&key=AIzaSyCNs0uO0Vd1he6zA-vCi2Cc6ymMvgGgkiU
+Website: https://www.dzukuainiai.lt/
 About: Delivery | Dine in | Reservable | Serves beer | Serves breakfast | Serves brunch | Serves dinner | Serves lunch | Serves wine | Takeout | Wheelchair accessible entrance
-Working Hours: Working Hours: Monday: 10:00 AM – 11:00 PM, Tuesday: 10:00 AM – 11:00 PM, Wednesday: 10:00 AM – 11:00 PM, Thursday: 10:00 AM – 11:00 PM, Friday: 10:00 AM – 11:00 PM, Saturday: 10:00 AM – 11:00 PM, Sunday: 10:00 AM – 11:00 PM
+Working Hours: Working Hours: Monday: 11:00 AM – 11:00 PM, Tuesday: 11:00 AM – 11:00 PM, Wednesday: 11:00 AM – 11:00 PM, Thursday: 11:00 AM – 11:00 PM, Friday: 11:00 AM – 12:00 AM, Saturday: 11:00 AM – 1:00 AM, Sunday: 11:00 AM – 10:00 PM
 Cuisine: restaurant
 
 ----------------------
-Name: Grill London
-Address: Laisvės alėja 72, Kaunas
-Rating: 4.4
-Price Level: 2
-Photo: https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=AWU5eFjzfvYCufuov9Ft_diw0PDoQOlxsBNjLEmCRhNTzIV3UNy44-iSIY8jIkjaV5VrcOvmNqs8iX3H-vzD2Tpoxwu9R3MHqsAKK82OFhBa5Q1kQkCNy8ZsxsQuI1RvGUm2D-gQIkAyB228_0GHaHhQ4AzLUX3FlUAB1vZsRJnpq1Swy3PY&key=AIzaSyCNs0uO0Vd1he6zA-vCi2Cc6ymMvgGgkiU
-Website: http://grilllondon.lt/kontaktai/laisves-aleja-kaunas/
-About: Delivery | Dine in | Reservable | Serves beer | Serves brunch | Serves dinner | Serves lunch | Serves vegetarian food | Serves wine | Takeout | Wheelchair accessible entrance
-Working Hours: Working Hours: Monday: 11:00 AM – 10:00 PM, Tuesday: 11:00 AM – 10:00 PM, Wednesday: 11:00 AM – 10:00 PM, Thursday: 11:00 AM – 11:00 PM, Friday: 11:00 AM – 12:00 AM, Saturday: 11:00 AM – 12:00 AM, Sunday: 11:00 AM – 10:00 PM
-Cuisine: restaurant
-
-----------------------
-Name: Sugamour
-Address: Karaliaus Mindaugo Prospektas 49, Kaunas
-Rating: 3.8
+Name: NU!
+Address: Vilniaus gatvė 18, Alytus
+Rating: 5
 Price Level: None
-Photo: https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=AWU5eFiJ3bILZzJOogqk4SlaWowPZzdcZQpkohpvm8OdjMFxmFBtChdHERs4C-JIqSPjuDjgygEMJaIZpEWEUU6yIjrgUxzUdWGkpNCIXrDU-Z5BoMJ0hjiW2sQH27WcjLt3aXZfIzXozMIygqaBZO8-VFlL__QN71FYZrqydHwoqzUEnTdV&key=AIzaSyCNs0uO0Vd1he6zA-vCi2Cc6ymMvgGgkiU
-Website: https://sugamour.lt/
-About: Dine in | Serves breakfast | Serves brunch | Takeout | Wheelchair accessible entrance
-Working Hours: Working Hours: Monday: 9:00 AM – 10:00 PM, Tuesday: 9:00 AM – 10:00 PM, Wednesday: 9:00 AM – 10:00 PM, Thursday: 9:00 AM – 10:00 PM, Friday: 9:00 AM – 10:00 PM, Saturday: 9:00 AM – 10:00 PM, Sunday: 9:00 AM – 10:00 PM
+Photo: https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=AWU5eFg8_E9cjwRPiMe-mZGk87_-0JTmlhYJNBzSZUN72KrZEFhqQBn0mMx8JrS29vBWv-mt1HbYd4tbO93atWnjNWDvdZJuM8wkivNaQkarR6EPVt4rUPf0Uyl294SwkdImd6QXcuDgrThnjk3W5dKuSIu4RZ9fHjjjpY6xlYp8DAyx8Jci&key=AIzaSyCNs0uO0Vd1he6zA-vCi2Cc6ymMvgGgkiU
+Website: https://www.facebook.com/kavine.NU
+About: Takeout
+Working Hours: Working Hours: Monday: Closed, Tuesday: 12:00 – 9:00 PM, Wednesday: 12:00 – 9:00 PM, Thursday: 12:00 – 9:00 PM, Friday: 12:00 – 9:00 PM, Saturday: 12:00 – 9:00 PM, Sunday: 12:00 – 9:00 PM
+Cuisine: restaurant
+
+----------------------
+Name: Coco Lounge
+Address: Naujoji gatvė 3, Alytus
+Rating: 4.1
+Price Level: None
+Photo: https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=AWU5eFiVNuLkZ65liBiR4A2yjDfrg_Gyvy1VNMsZdKE9DU3c5aJz5KhOrv6ziBDthElPJjrxhZ6VRtY97mHwZvRQQxnsl1VYVxv42lrwAeqTPu3sNG9-9BDP7GAjnD-o5cYiJOBzKC2TRjcmjjIXhoRePVbAnizVbkCbOZt4JZMqFOpIrtx1&key=AIzaSyCNs0uO0Vd1he6zA-vCi2Cc6ymMvgGgkiU
+Website: No website available
+About: Delivery | Dine in | Reservable | Serves beer | Serves breakfast | Serves brunch | Serves dinner | Serves lunch | Serves vegetarian food | Serves wine | Takeout | Wheelchair accessible entrance
+Working Hours: Working Hours: Monday: 10:00 AM – 10:00 PM, Tuesday: 10:00 AM – 10:00 PM, Wednesday: 10:00 AM – 10:00 PM, Thursday: 10:00 AM – 10:00 PM, Friday: 10:00 AM – 10:00 PM, Saturday: 11:00 AM – 10:00 PM, Sunday: 11:00 AM – 10:00 PM
 Cuisine: restaurant
 
 ----------------------

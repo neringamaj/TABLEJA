@@ -43,6 +43,14 @@
   gap: 50px;
 }
 
+@media (max-width: 800px) {
+  .App-content {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+}
+
 /* Updated Chatbot Container Styling with Animations */
 .chatbot-container {
   background-color: #353057;
@@ -51,6 +59,7 @@
   color: #ffffff;
   flex-basis: 400px;
   display: flex;
+  min-width: 300px; /* adjust this value as needed */
   flex-direction: column;
   border-radius: 10px;
   padding: 20px;
@@ -58,6 +67,12 @@
   animation: fadeInUp 0.5s ease; /* Fade in animation */
 }
 
+@media (max-width: 600px) {
+  .chatbot-container {
+    flex-basis: 100%;
+    max-height: 32em;
+  }
+}
 @keyframes fadeInUp {
   from {
     opacity: 0;

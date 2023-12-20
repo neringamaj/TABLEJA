@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import config from './config';
+import { v4 as uuid4 } from 'uuid';
 
 function App() {
   const [userInput, setUserInput] = useState('');
@@ -11,6 +12,11 @@ function App() {
 
   const itemsPerPage = 5;  // Adjust as needed
   const visitedPerPage = 5; // Currently not used but declared for future use
+  
+  if (!sessionStorage.getItem('userID')) {
+    sessionStorage.setItem('userID', (uuid4()).toString());
+  }
+  let userID = sessionStorage.getItem('userID');
 
   useEffect(() => {
     fetchRecommendedRestaurants();
@@ -36,34 +42,50 @@ function App() {
   };
 
   const sendMessageToBot = async (message) => {
+    setChatMessages([
+      ...chatMessages,
+      { text: message, sender: 'user' },
+    ]);
+    
     try {
       const response = await fetch(`${config.API_ENDPOINT}/api/chatbot`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ message }),
+        body: JSON.stringify({ message, userID }),
       });
 
       const data = await response.json();
-      const id1 = data.id.toString();
-      fetchRestaurantDetails(id1);
-      
-      const description = data.reply[1].description;
-      const address = data.reply[1].address;
-      const restaurantName = data.reply[1].name;
+      if (data.marker != "recommendation") {
+        setChatMessages([
+          ...chatMessages,
+          { text: message, sender: 'user' },
+          { text: data.reply, sender: 'bot' },
+        ]);
+        return;
+      }
 
-      const botReplyDescription = `Aprašymas: ${description}`;
-      const botReplyAddress = `Adresas: ${address}`;
-      const botReplyRestaurantName = `Restorano pavadinimas: ${restaurantName}`;
+      else {
+        const id1 = data.id.toString();
+        fetchRestaurantDetails(id1);
+        
+        const description = data.reply[1].description;
+        const address = data.reply[1].address;
+        const restaurantName = data.reply[1].name;
 
-      setChatMessages([
-        ...chatMessages,
-        { text: message, sender: 'user' },
-        { text: botReplyDescription, sender: 'bot' },
-        { text: botReplyAddress, sender: 'bot' },
-        { text: botReplyRestaurantName, sender: 'bot' },
-      ]);
+        const botReplyDescription = `Aprašymas: ${description}`;
+        const botReplyAddress = `Adresas: ${address}`;
+        const botReplyRestaurantName = `Restorano pavadinimas: ${restaurantName}`;
+
+        setChatMessages([
+          ...chatMessages,
+          { text: message, sender: 'user' },
+          { text: botReplyDescription, sender: 'bot' },
+          { text: botReplyAddress, sender: 'bot' },
+          { text: botReplyRestaurantName, sender: 'bot' },
+        ]);
+      }
     } catch (error) {
       console.error('Error sending message to bot:', error);
       setChatMessages([
@@ -140,26 +162,26 @@ function App() {
    return;
   }
 
+  const messagesEndRef = React.useRef(null);
+  React.useEffect(() => {
+    if (messagesEndRef.current) {
+      messagesEndRef.current.scrollTop = messagesEndRef.current.scrollHeight;
+    }
+  }, [chatMessages]);
+
+
   return (
     <div className="App">
       <header className="App-header">
         <h1>TABLEO</h1>
-        <div className="language-icons">
-          <div className="language-icon" onClick={() => changeLanguage('en')}>
-            🇬🇧
-          </div>
-          <div className="language-icon" onClick={() => changeLanguage('lt')}>
-            🇱🇹
-          </div>
-        </div>
       </header>
       <div className="App-content">
         <div className="chatbot-container">
-          <div className="chat-messages">
-            {chatMessages.map((msg, index) => (
-              <div key={index} className={`chat-message ${msg.sender}`}>{msg.text}</div>
-            ))}
-          </div>
+        <div className="chat-messages" ref={messagesEndRef}>
+  {chatMessages.map((msg, index) => (
+    <div key={index} className={`chat-message ${msg.sender}`}>{msg.text}</div>
+  ))}
+</div>
           <div className="chat-input-container">
             <input
               type="text"
