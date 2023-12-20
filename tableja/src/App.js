@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import config from './config';
-import uuid4 from 'uuid';
+import { v4 as uuid4 } from 'uuid';
 
 function App() {
   const [userInput, setUserInput] = useState('');
@@ -157,6 +157,14 @@ function App() {
    return;
   }
 
+  const messagesEndRef = React.useRef(null);
+  React.useEffect(() => {
+    if (messagesEndRef.current) {
+      messagesEndRef.current.scrollTop = messagesEndRef.current.scrollHeight;
+    }
+  }, [chatMessages]);
+
+
   return (
     <div className="App">
       <header className="App-header">
@@ -172,11 +180,11 @@ function App() {
       </header>
       <div className="App-content">
         <div className="chatbot-container">
-          <div className="chat-messages">
-            {chatMessages.map((msg, index) => (
-              <div key={index} className={`chat-message ${msg.sender}`}>{msg.text}</div>
-            ))}
-          </div>
+        <div className="chat-messages" ref={messagesEndRef}>
+  {chatMessages.map((msg, index) => (
+    <div key={index} className={`chat-message ${msg.sender}`}>{msg.text}</div>
+  ))}
+</div>
           <div className="chat-input-container">
             <input
               type="text"
