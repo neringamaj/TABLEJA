@@ -42,6 +42,11 @@ function App() {
   };
 
   const sendMessageToBot = async (message) => {
+    setChatMessages([
+      ...chatMessages,
+      { text: message, sender: 'user' },
+    ]);
+    
     try {
       const response = await fetch(`${config.API_ENDPOINT}/api/chatbot`, {
         method: 'POST',
@@ -169,14 +174,6 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>TABLEO</h1>
-        <div className="language-icons">
-          <div className="language-icon" onClick={() => changeLanguage('en')}>
-            🇬🇧
-          </div>
-          <div className="language-icon" onClick={() => changeLanguage('lt')}>
-            🇱🇹
-          </div>
-        </div>
       </header>
       <div className="App-content">
         <div className="chatbot-container">
