@@ -4,8 +4,8 @@
 
 <h2>Visuals</h2>
 <p>
-  <img src="https://github.com/neringamaj/TABLEJA/assets/93888787/11a03d78-821e-4746-9dfe-a7563703eab8">
-  <a src="https://drive.google.com/file/d/1JAQtRj1n2UOASveMsq4IAbO7nwdclkYG/view?usp=sharing">Link to see the full demonstration</a>
+  <img src="https://github.com/neringamaj/TABLEJA/assets/93888787/d5acc4bf-6ab0-4d0b-bdae-f7679b45cdf5">
+  <a href="https://drive.google.com/file/d/1JAQtRj1n2UOASveMsq4IAbO7nwdclkYG/view?usp=sharing">Link to see the full demonstration</a>
 </p>
 
 <h2>Installation</h2>
