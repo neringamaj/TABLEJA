@@ -1,12 +1,11 @@
 .App {
   font-family: 'Arial', sans-serif;
-  color: #2c3e50; /* Dark text color */
+  color: #2c3e50; 
   height: 100vh;
-  background-color: whitesmoke; /* Light background color */
-  position: relative; /* Added position relative for absolute positioning */
+  background-color: whitesmoke; 
+  position: relative; 
 }
 
-/* Language Icons Styling */
 .language-icons {
   position: absolute;
   top: 10px;
@@ -21,9 +20,8 @@
   cursor: pointer;
 }
 
-
 .App-header {
-  background-color: #353057; /* Green header background */
+  background-color: #353057; 
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -51,7 +49,6 @@
   }
 }
 
-/* Updated Chatbot Container Styling with Animations */
 .chatbot-container {
   background-color: #353057;
   overflow: auto;
@@ -59,7 +56,7 @@
   color: #ffffff;
   flex-basis: 400px;
   display: flex;
-  min-width: 300px; /* adjust this value as needed */
+  min-width: 300px;
   flex-direction: column;
   border-radius: 10px;
   padding: 20px;
@@ -84,7 +81,7 @@
   }
 }
 
-/* Stylish Chat Message Styling */
+/* Chat Message Styling */
 .chat-messages {
   overflow: auto;
   height: 100%; 
@@ -115,7 +112,7 @@
   background-color: #2ecc71;
 }
 
-/* Improved Chat Input Styling with Hover Animation */
+/* Chat Input Styling with Hover Animation */
 .chat-input-container {
   display: flex;
   margin-top: 10px;
@@ -164,19 +161,18 @@
   color: white;
 }
 
-/* Updated Suggestions Section Styling */
+/* Suggestions Section Styling */
 .suggestions-section {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
 
-/* Updated Suggestions Section Styling */
 .suggestions-container {
-  background-color: #353057; /* Blue suggestions background */
-  padding: 20px; /* Adjusted padding for better spacing */
+  background-color: #353057; 
+  padding: 20px;
   border-radius: 10px;
-  margin-bottom: 20px; /* Increased margin for better separation */
+  margin-bottom: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden; /* Make the container unscrollable */
 }
@@ -195,7 +191,7 @@
   scroll-snap-type: x proximity; /* Enable snap scrolling */
 }
 
-/* Restyled Restaurant Card Styling */
+/* Restaurant Card Styling */
 .restaurant-card {
   background-color: #ffffff;
   border-radius: 10px;
@@ -209,7 +205,7 @@
 
 .restaurant-card img {
   width: 185px;
-  height: 200px; /* Adjusted height for better appearance */
+  height: 200px;
   object-fit: cover;
   display: block;
   border-radius: 10px 10px 0 0;

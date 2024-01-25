@@ -1,10 +1,9 @@
-import requests
-import json
 from src.database import upload_restaurant
 from src.postgre import insert_restaurant
 from openai import OpenAI
 from uuid import uuid4
-from dotenv import load_dotenv, dotenv_values
+from dotenv import load_dotenv
+import requests
 import os
 
 load_dotenv()
@@ -14,6 +13,7 @@ api_key=os.getenv("MAPS_API_KEY")
 
 def get_embedding(text, model="text-embedding-ada-002"):
    text = text.replace("\n", " ")
+
    return client.embeddings.create(input = [text], model=model).data[0].embedding
 
 def get_coordinates(address):
@@ -22,8 +22,10 @@ def get_coordinates(address):
     if response['status'] == 'OK':
         latitude = response['results'][0]['geometry']['location']['lat']
         longitude = response['results'][0]['geometry']['location']['lng']
+
         return  f"{latitude}, {longitude}"
     else:
+
         return None
 
 def get_restaurants(api_key, location, radius):
@@ -38,12 +40,10 @@ def get_restaurants(api_key, location, radius):
     results = []
     if res.status_code == 200:
         restaurants = res.json()['results']
-        print(restaurants)
         for restaurant in restaurants:
             place_id = restaurant.get("place_id")
             details = get_place_details(api_key, place_id) if place_id else {}
             if details:  # Include if details are available
-
                 unique_id = uuid4()
                 restaurant_info = {
                     'Name': restaurant.get('name'),
@@ -60,7 +60,6 @@ def get_restaurants(api_key, location, radius):
                 query = f"Restaurant name: {restaurant_info['Name']}\nRestaurant address: {restaurant_info['Address']}\nRestaurant rating: {restaurant_info['Rating']}\nRestaurant price level: {restaurant_info['Price Level']}\n Restaurant cuisine: {restaurant_info['Cuisine']}\n Restaurant about: {restaurant_info['About']}\n"
                 upload_restaurant(get_embedding(query), str(unique_id), restaurant_info['Name'], restaurant_info['Address'], restaurant_info['Rating'], restaurant_info['About'], restaurant_info['Cuisine'], restaurant_info['Price Level'])
                 insert_restaurant(unique_id, restaurant_info['Name'], restaurant_info['Photo'])
-    print(results)
 
     return results
 
@@ -97,16 +96,17 @@ def get_place_details(api_key, place_id):
             'working_hours': working_hours,
             'cuisine': ', '.join(cuisine_types) if cuisine_types else 'Cuisine not specified'
         }
+    
     return None
 
 def get_photo_url(api_key, photo_reference):
     if photo_reference:
         return f"https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={photo_reference}&key={api_key}"
+    
     return 'No photo available'
 
 def fetch_data_from_google_maps_api(loc):
     location = get_coordinates(loc)
-    print(location)
     radius = 1000  
 
     get_restaurants(api_key, location, radius)

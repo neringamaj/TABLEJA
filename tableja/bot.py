@@ -1,7 +1,7 @@
-import openai
-import os
 from src.database import get_recommendations_from_database, is_location_not_in_database, get_user_preferences, update_user_preferences
 from google_maps_api import fetch_data_from_google_maps_api
+import openai
+import os
 
 api_key = os.getenv("OPENAI_3.5_API_KEY")
 openai.api_key = api_key
@@ -64,8 +64,6 @@ def chat_with_bot(user_input, unique_id):
     )
     extracted_info = interpreted_response.choices[0].message.content
 
-    print(extracted_info)
-
     # Define a list of preference keys
     preferences = ["Cuisine: ", "City: ", "Location: ", "Budget: ", "Additional Info: ", "Show: "]
 
@@ -79,9 +77,6 @@ def chat_with_bot(user_input, unique_id):
                 value = line[len(preference):].strip()
                 if value.lower() != "none":
                     user_preferences[preference] = value
-                    print(f"Set {preference} to {value}")
-
-    print(user_preferences)
 
     update_user_preferences(str(unique_id), user_preferences)
 
@@ -108,7 +103,5 @@ def chat_with_bot(user_input, unique_id):
         response.append(recommendations[3])
     else:
         response.extend(["no recommendation", None, None, bot_reply])
-
-    print(response)
 
     return response

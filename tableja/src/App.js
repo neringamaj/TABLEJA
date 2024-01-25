@@ -7,12 +7,7 @@ function App() {
   const [userInput, setUserInput] = useState('');
   const [chatMessages, setChatMessages] = useState([]);
   const [restaurants, setRestaurants] = useState({ suggestions: [], recommended: [] });
-  
-  const [recommendedPage, setRecommendedPage] = useState(0);
-
-  const itemsPerPage = 5;  // Adjust as needed
-  const visitedPerPage = 5; // Currently not used but declared for future use
-  
+    
   if (!sessionStorage.getItem('userID')) {
     sessionStorage.setItem('userID', (uuid4()).toString());
   }
@@ -57,7 +52,7 @@ function App() {
       });
 
       const data = await response.json();
-      if (data.marker != "recommendation") {
+      if (data.marker !== "recommendation") {
         setChatMessages([
           ...chatMessages,
           { text: message, sender: 'user' },
@@ -95,6 +90,7 @@ function App() {
       ]);
     }
   };
+
   const fetchRestaurantDetails = async (restaurantId) => {
     try {
       const response = await fetch(`${config.API_ENDPOINT}/api/restaurants/${restaurantId}`);
@@ -136,39 +132,12 @@ function App() {
     }
   };
 
-  /* const changeSuggestionPage = (direction) => {
-    const totalPages = Math.ceil(restaurants.suggestions.length / itemsPerPage);
-    setRestaurants(prevPage => {
-      if (direction === "next") {
-        return (prevPage + 1) % totalPages;
-      } else {
-        return (prevPage - 1 + totalPages) % totalPages;
-      }
-    });
-  };
-
-  const changeVisitedPage = (direction) => {
-    const totalPages = Math.ceil(restaurants.visited.length / visitedPerPage);
-    setVisitedPage(prevPage => {
-      if (direction === "next") {
-        return (prevPage + 1) % totalPages;
-      } else {
-        return (prevPage - 1 + totalPages) % totalPages;
-      }
-    });
-  }; */
-
-  function changeLanguage(lang) {
-   return;
-  }
-
   const messagesEndRef = React.useRef(null);
   React.useEffect(() => {
     if (messagesEndRef.current) {
       messagesEndRef.current.scrollTop = messagesEndRef.current.scrollHeight;
     }
   }, [chatMessages]);
-
 
   return (
     <div className="App">
@@ -178,25 +147,24 @@ function App() {
       <div className="App-content">
         <div className="chatbot-container">
         <div className="chat-messages" ref={messagesEndRef}>
-  {chatMessages.map((msg, index) => (
-    <div key={index} className={`chat-message ${msg.sender}`}>{msg.text}</div>
-  ))}
-</div>
-          <div className="chat-input-container">
-            <input
-              type="text"
-              className="chat-input"
-              placeholder="Type a message..."
-              value={userInput}
-              onChange={handleUserInput}
-              onKeyPress={handleKeyPress}
-            />
-            <button className="chat-send-button" onClick={handleSendMessage}>Send</button>
-          </div>
+          {chatMessages.map((msg, index) => (
+            <div key={index} className={`chat-message ${msg.sender}`}>{msg.text}</div>
+          ))}
+        </div>
+        <div className="chat-input-container">
+          <input
+            type="text"
+            className="chat-input"
+            placeholder="Type a message..."
+            value={userInput}
+            onChange={handleUserInput}
+            onKeyPress={handleKeyPress}
+          />
+          <button className="chat-send-button" onClick={handleSendMessage}>Send</button>
+        </div>
         </div>
         <div className="suggestions-section">
           <h2 className="section-title">Suggestions</h2>
-
           <div className="suggestions-container">
             <div className="suggestions">
             {restaurants.suggestions.map(suggestion => (
@@ -210,7 +178,6 @@ function App() {
             </div>
           </div>
           <h2 className="section-title">Recommended</h2>
-
           <div className="visited-container">
             <div className="visited">
               {restaurants.recommended.map(recommended => (
